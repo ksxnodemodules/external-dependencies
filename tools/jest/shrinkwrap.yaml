@@ -1,7 +1,7 @@
 dependencies:
   '@tools/places': 'link:../places'
   babel-jest: 23.6.0
-  convenient-typescript-utilities: 0.0.1
+  convenient-typescript-utilities: 0.0.2
   create-jest-runner: 0.4.1
   fast-deep-equal: 2.0.1
   jest: 23.6.0
@@ -628,15 +628,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
-  /convenient-typescript-utilities/0.0.1:
-    dependencies:
-      '@types/node': 10.11.3
-      tslib: 1.9.3
-    dev: false
-    engines:
-      node: '>= 8.9.0'
-    resolution:
-      integrity: sha512-MnpMgVHF5IZPGOdYUVvD72iwLAi7f1Sv5LlwUuusp9IvjvXwWnQi8lRAja6HOLlQlPpMw2niz2av9EBVHbplEQ==
   /convenient-typescript-utilities/0.0.2:
     dependencies:
       '@types/node': 10.11.3
@@ -3642,7 +3633,7 @@ shrinkwrapVersion: 3
 specifiers:
   '@tools/places': 'file:../places'
   babel-jest: ^23.4.2
-  convenient-typescript-utilities: ^0.0.1
+  convenient-typescript-utilities: ^0.0.2
   create-jest-runner: ^0.4.0
   fast-deep-equal: ^2.0.1
   jest: ^23.5.0
