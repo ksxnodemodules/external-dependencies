@@ -1,6 +1,7 @@
 {
   "name": "external-dependencies",
   "version": "0.0.0",
+  "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/ksxnodemodules/external-dependencies#readme",
   "repository": {
@@ -13,6 +14,6 @@
   "dependencies": {
     "tslib": "^1.9.3",
     "nested-workspace-helper": "^0.2.6",
-    "@types/node": "^10.9.4"
+    "@types/node": "^10.11.3"
   }
 }
