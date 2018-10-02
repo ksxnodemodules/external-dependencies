@@ -11,20 +11,28 @@
     "url": "https://github.com/nodejs-monorepo-templates/typescript-monorepo.git/issues"
   },
   "devDependencies": {
+    "standard": "^12.0.1",
+    "tslint": "^5.11.0",
+    "tslint-config-standard": "^8.0.1",
+    "typescript": "^3.0.3",
     "toolcheck": "^0.0.3",
     "@types/jest": "^23.3.1",
     "@types/node": "^10.9.4"
   },
   "scripts": {
-    "console": "node tools/console/bin.js",
+    "mismatches": "bash scripts/mismatches.sh",
+    "repl": "node tools/repl/bin.js",
+    "console": "node tools/repl/bin.js",
     "preloaded-node": "node tools/preloaded-node/bin.js",
+    "monorepo": "node tools/monorepo/bin",
     "standardjs": "bash scripts/standardjs.sh",
     "standardjs:fix": "bash scripts/standardjs.sh --fix",
     "tslint": "bash scripts/tslint.sh",
     "tslint:fix": "bash scripts/tslint.sh --fix",
     "test": "bash scripts/test.sh",
     "build": "bash scripts/build.sh",
-    "clean-typescript-build": "node tools/clean-typescript-build/bin.js"
+    "clean-typescript-build": "node tools/clean-typescript-build/bin.js",
+    "prepublishOnly": "bash scripts/prepublish.sh"
   },
   "standard": {
     "env": {
