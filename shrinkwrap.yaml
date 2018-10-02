@@ -1,6 +1,6 @@
 devDependencies:
   '@types/jest': 23.3.2
-  '@types/node': 10.11.1
+  '@types/node': 10.11.3
   standard: 12.0.1
   toolcheck: 0.0.3
   tslint: 5.11.0
@@ -17,10 +17,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-D1xlXHZpDonVX+VJ28XtcD5xlu8ex6Fc4cQNnrm2wJvlQnbec9RedhCrhQr6kRAE9XWHSec+JPuTmqJ9jC0qsA==
-  /@types/node/10.11.1:
-    dev: true
-    resolution:
-      integrity: sha512-Mash7eQv0HOs/fBVywUGR7NLSXyMl3XHkIo/kcWBgD9ppwPYOp8UDFxZfKy9hWeVHT2p+69vgXTPbPpoeqoM8w==
   /@types/node/10.11.3:
     dev: true
     resolution:
