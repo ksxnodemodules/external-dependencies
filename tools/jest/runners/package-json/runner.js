@@ -5,6 +5,7 @@ const semver = require('semver')
 const runner = require('create-jest-runner')
 const depRange = require('parse-dependency-range')
 const { unwrap } = require('convenient-typescript-utilities').func
+const justTry = require('just-try')
 const places = require('@tools/places')
 const globalManifestPath = path.resolve(places.project, 'package.json')
 const globalManifest = require(globalManifestPath)
@@ -84,6 +85,30 @@ function main ({ testPath }) {
 
       const { name: actualName, version } = require(depManifestPath)
       const parsedVersion = depRange.parse(range)
+
+      if (name.startsWith('@types/')) {
+        const globalDependencies = Object.assign(
+          {},
+          globalManifest.dependencies,
+          globalManifest.devDependencies
+        )
+
+        if (name in globalDependencies) {
+          const expectedRange = globalDependencies[name]
+          if (expectedRange && range !== expectedRange) {
+            reasons.push(`Expecting "${name}": "${expectedRange}" but received "${name}": ${range}"`)
+          }
+
+          justTry(() => {
+            const expectedVersion = require(
+              path.resolve(places.project, 'node_modules', name, 'package.json')
+            ).version
+            if (version !== expectedVersion) {
+              reasons.push(`Expecting ${name}@${expectedVersion} (${field}) but received ${name}@${version} (global)`)
+            }
+          })
+        }
+      }
 
       switch (parsedVersion.type) {
         case depRange.Type.Semver: {

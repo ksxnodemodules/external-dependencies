@@ -5,6 +5,7 @@ dependencies:
   create-jest-runner: 0.4.1
   fast-deep-equal: 2.0.1
   jest: 23.6.0
+  just-try: 2.1.0
   parse-dependency-range: 0.0.2
   semver: 5.5.1
   ts-jest: 23.10.3
@@ -2090,6 +2091,12 @@ packages:
       '0': node >=0.6.0
     resolution:
       integrity: sha1-MT5mvB5cwG5Di8G3SZwuXFastqI=
+  /just-try/2.1.0:
+    dev: false
+    engines:
+      node: '>= 6.0.0'
+    resolution:
+      integrity: sha512-HNFKMZJdXL/zpj2zbzocF9gn3RgEHFSBZ9Xpk1riWcXI+xtZaqMFDReXZOpVy80Wixy99tYwSdHopWPiUzFKxg==
   /kind-of/3.2.2:
     dependencies:
       is-buffer: 1.1.6
@@ -3632,14 +3639,15 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   '@tools/places': 'file:../places'
-  babel-jest: ^23.4.2
+  babel-jest: ^23.6.0
   convenient-typescript-utilities: ^0.0.2
-  create-jest-runner: ^0.4.0
+  create-jest-runner: ^0.4.1
   fast-deep-equal: ^2.0.1
-  jest: ^23.5.0
+  jest: ^23.6.0
+  just-try: ^2.1.0
   parse-dependency-range: ^0.0.2
   semver: ^5.5.1
-  ts-jest: ^23.1.4
+  ts-jest: ^23.10.3
   tslib: ^1.9.3
-  typescript: ^3.0.3
+  typescript: ^3.1.1
   yaml-jest: ^1.0.5
