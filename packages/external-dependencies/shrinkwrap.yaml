@@ -578,6 +578,6 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
-  '@types/node': ^10.9.4
+  '@types/node': ^10.11.3
   nested-workspace-helper: ^0.2.6
   tslib: ^1.9.3
