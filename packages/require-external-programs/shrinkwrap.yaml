@@ -1,11 +1,18 @@
 dependencies:
   '@types/fs-extra': 5.0.4
   '@types/node': 10.11.3
+  advanced-set-mutable-multi-key: 0.0.0
   fs-extra: 7.0.0
   glob: 7.1.3
   glob-promise: 3.4.0
   tslib: 1.9.3
 packages:
+  /@babel/runtime/7.1.2:
+    dependencies:
+      regenerator-runtime: 0.12.1
+    dev: false
+    resolution:
+      integrity: sha512-Y3SCjmhSupzFB6wcv1KmmFucH6gDVnI30WjOcicV10ju0cZjak3Jcs67YLIXBrmZYw1xCrVeJPbycFwrqNyxpg==
   /@types/events/1.2.0:
     dev: false
     resolution:
@@ -32,6 +39,66 @@ packages:
     dev: false
     resolution:
       integrity: sha512-3AvcEJAh9EMatxs+OxAlvAEs7OTy6AG94mcH1iqyVDwVVndekLxzwkWQ/Z4SDbY6GO2oyUXyWW8tQ4rENSSQVQ==
+  /@types/node/10.11.7:
+    dev: false
+    resolution:
+      integrity: sha512-yOxFfkN9xUFLyvWaeYj90mlqTJ41CsQzWKS3gXdOMOyPVacUsymejKxJ4/pMW7exouubuEeZLJawGgcNGYlTeg==
+  /advanced-set-altered-equal/0.0.0:
+    dependencies:
+      '@types/node': 10.11.7
+      advanced-set-base: 0.0.0
+      advanced-set-types: 0.0.0
+      convenient-typescript-utilities: 0.0.2
+      tslib: 1.9.3
+    dev: false
+    engines:
+      node: '>= 8.9.0'
+    resolution:
+      integrity: sha512-gPw6d5doaiuhlV8G+kNQ2+8TPk7afyf80CfSY/AxBHd8YYOxckOjnsrYtk1sfsE0InWrJMiiJ2RV74NnF64pQg==
+  /advanced-set-base/0.0.0:
+    dependencies:
+      '@types/node': 10.11.7
+      advanced-set-types: 0.0.0
+      tslib: 1.9.3
+      typescript-miscellaneous: 0.1.0
+    dev: false
+    engines:
+      node: '>= 8.9.0'
+    resolution:
+      integrity: sha512-RP3zt5zRkNTAWCW/0u1A3jmOp6xel8qFt0U9YYbuhNRGIkjGhHOb9lzchbND6yutVohaH32Voz0ojbOVIzkZLg==
+  /advanced-set-multi-key-base/0.0.0:
+    dependencies:
+      '@types/node': 10.11.7
+      advanced-set-altered-equal: 0.0.0
+      advanced-set-types: 0.0.0
+      create-array-equal: 0.0.0
+      tslib: 1.9.3
+    dev: false
+    engines:
+      node: '>= 8.9.0'
+    resolution:
+      integrity: sha512-M7/nd51HDqPODxIGBJ1Zw9xyKIIyjDfVCHXMLS/mQCqWYwUzOT5rvVwJCK6FP1zZZ+u3H5N3QjV3khK83abuJQ==
+  /advanced-set-mutable-multi-key/0.0.0:
+    dependencies:
+      '@types/node': 10.11.7
+      advanced-set-multi-key-base: 0.0.0
+      advanced-set-types: 0.0.0
+      tslib: 1.9.3
+    dev: false
+    engines:
+      node: '>= 8.9.0'
+    resolution:
+      integrity: sha512-EQ1Owd9vGPMgH52yPS+kWFLjl3K0ad3MwFjEKkichqmaTJ0qzzMYWmhnAttdwpCg70igfFHpVmjdEntUc8/C9Q==
+  /advanced-set-types/0.0.0:
+    dependencies:
+      '@types/node': 10.11.7
+      tslib: 1.9.3
+      typescript-miscellaneous: 0.1.0
+    dev: false
+    engines:
+      node: '>= 8.9.0'
+    resolution:
+      integrity: sha512-xAvd7khFkgWxmedqyBb53RW9JJwEOWahX/h2LaKx6YJkjHkriBPVkW1zX6K1RabUnWza6loqoKooe/oZkEQ+OQ==
   /balanced-match/1.0.0:
     dev: false
     resolution:
@@ -43,10 +110,42 @@ packages:
     dev: false
     resolution:
       integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==
+  /clone-regexp/2.1.0:
+    dependencies:
+      is-regexp: 2.0.0
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-Ujn//SX3jg4duyQGM37swl+Sk95zmQnraZO0fGVZQEq1fJJML8mJaEkbT70ns/kBcdU7HLzpF8VJUmsb1lDD8Q==
   /concat-map/0.0.1:
     dev: false
     resolution:
       integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
+  /convenient-typescript-utilities/0.0.2:
+    dependencies:
+      '@types/node': 10.11.7
+      tslib: 1.9.3
+    dev: false
+    engines:
+      node: '>= 8.9.0'
+    resolution:
+      integrity: sha512-EHaJmmr+j9Dn4Hdv+X1XACugJ2NeToifdINS/LjuPgVyZW2ka+2Xi0P5tJC4ve7LbdijgI7EplqxzmGVMO2huQ==
+  /create-array-equal/0.0.0:
+    dependencies:
+      '@types/node': 10.11.7
+      iter-tools: 6.1.4
+      tslib: 1.9.3
+      typescript-miscellaneous: 0.1.0
+    dev: false
+    engines:
+      node: '>= 8.9.0'
+    resolution:
+      integrity: sha512-PKGYy366uoR4/A1RqKgVmyZfxf7M7Ilp9L7zHx7OubCylYp4G2WcS3gnLwrfSKIUfbV8jOOYqY1YbNOhVGhR9g==
+  /dequeue/1.0.5:
+    dev: false
+    resolution:
+      integrity: sha1-EPHO8H4yNLIdyzj0v6LWYDSrZ8c=
   /fs-extra/7.0.0:
     dependencies:
       graceful-fs: 4.1.11
@@ -99,12 +198,33 @@ packages:
     dev: false
     resolution:
       integrity: sha1-Yzwsg+PaQqUC9SRmAiSA9CCCYd4=
+  /is-regexp/2.0.0:
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-B5NGyyvXTmppdR/g7ei6cu5DXhvzBLNcajOXJ3OR1tmW39iiF7444beL1lQjL393j8vDOTWGnSV2r/5cKuNqkg==
+  /iter-tools/6.1.4:
+    dependencies:
+      '@babel/runtime': 7.1.2
+      clone-regexp: 2.1.0
+      dequeue: 1.0.5
+      little-ds-toolkit: 1.1.0
+      typescript-tuple: 1.7.3
+      typescript-union: 0.0.0
+    dev: false
+    resolution:
+      integrity: sha512-MpUCYuPa7w8CzoHFWRycVsWBookzztSYjFaeYWHBUmumtuNWKtAbhUnAS+9tEku9GA961a8xa7CeH5Vm0+pQ5g==
   /jsonfile/4.0.0:
     dev: false
     optionalDependencies:
       graceful-fs: 4.1.11
     resolution:
       integrity: sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=
+  /little-ds-toolkit/1.1.0:
+    dev: false
+    resolution:
+      integrity: sha512-2ARbmay5TrhFxFqcyFxPigmRToDuo8yxvIMdvwsDYNd/oZKnvsFT5L3I7s8WLXR7/tThYeffN9ouDtFFk4wzsA==
   /minimatch/3.0.4:
     dependencies:
       brace-expansion: 1.1.11
@@ -123,16 +243,51 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-F0uSaHNVNP+8es5r9TpanhtcX18=
+  /regenerator-runtime/0.12.1:
+    dev: false
+    resolution:
+      integrity: sha512-odxIc1/vDlo4iZcfXqRYFj0vpXFNoGdKMAUieAlFYO6m/nl5e9KR/beGf41z4a1FI+aQgtjhuaSlDxQ0hmkrHg==
   /tslib/1.9.3:
     dev: false
     resolution:
       integrity: sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
+  /typescript-miscellaneous/0.1.0:
+    dependencies:
+      '@types/node': 10.11.7
+      tslib: 1.9.3
+    dev: false
+    engines:
+      node: '>= 8.9.0'
+      typescript: '>= 3.0.0'
+    resolution:
+      integrity: sha512-JPy2LNt44g/q4nJo4CzzGgfrA5LOHQl7I2XKVfK1gGz9F5WhataKRLrahk7RTMTckq31gkKe5LgiSkjxB2Ubiw==
+  /typescript-tuple/1.7.3:
+    dev: false
+    engines:
+      typescript: ^3.0.0
+    resolution:
+      integrity: sha512-ygCTfD6CX5ul+J0sZhq2MSouMNAeJpRXAFkYPUZomv457KWg15DuS7n+ubv15LtbX27iVo6DkuiX/5yyNdBvVg==
+  /typescript-union/0.0.0:
+    dependencies:
+      typescript-tuple: 1.7.3
+      utility-types: 2.1.0
+    dev: false
+    peerDependencies:
+      typescript: '>= 3.0.0'
+    resolution:
+      integrity: sha512-sWOTNcTOXw27cJhfvjSbxrKggb4XD+fPIFkjIqqnycdVqStj/3IR3QVEMZOheWY5ELGS3PCwuHFDVWAbK9UHvA==
   /universalify/0.1.2:
     dev: false
     engines:
       node: '>= 4.0.0'
     resolution:
       integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==
+  /utility-types/2.1.0:
+    dev: false
+    engines:
+      node: '>= 4'
+    resolution:
+      integrity: sha512-/nP2gqavggo6l38rtQI/CdeV+2fmBGXVvHgj9kV2MAnms3TIi77Mz9BtapPFI0+GZQCqqom0vACQ+VlTTaCovw==
   /wrappy/1.0.2:
     dev: false
     resolution:
@@ -143,6 +298,7 @@ shrinkwrapVersion: 3
 specifiers:
   '@types/fs-extra': ^5.0.4
   '@types/node': ^10.11.3
+  advanced-set-mutable-multi-key: ^0.0.0
   fs-extra: ^7.0.0
   glob: ^7.1.3
   glob-promise: ^3.4.0
