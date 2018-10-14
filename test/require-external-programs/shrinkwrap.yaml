@@ -1,4 +1,5 @@
 dependencies:
+  change-case: 3.0.2
   extra-jest: 0.0.23
   require-external-programs: 'link:../../packages/require-external-programs'
 packages:
@@ -22,6 +23,49 @@ packages:
     dev: false
     resolution:
       integrity: sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==
+  /camel-case/3.0.0:
+    dependencies:
+      no-case: 2.3.2
+      upper-case: 1.1.3
+    dev: false
+    resolution:
+      integrity: sha1-yjw2iKTpzzpM2nd9xNy8cTJJz3M=
+  /change-case/3.0.2:
+    dependencies:
+      camel-case: 3.0.0
+      constant-case: 2.0.0
+      dot-case: 2.1.1
+      header-case: 1.0.1
+      is-lower-case: 1.1.3
+      is-upper-case: 1.1.2
+      lower-case: 1.1.4
+      lower-case-first: 1.0.2
+      no-case: 2.3.2
+      param-case: 2.1.1
+      pascal-case: 2.0.1
+      path-case: 2.1.1
+      sentence-case: 2.1.1
+      snake-case: 2.1.0
+      swap-case: 1.1.2
+      title-case: 2.1.1
+      upper-case: 1.1.3
+      upper-case-first: 1.1.2
+    dev: false
+    resolution:
+      integrity: sha512-Mww+SLF6MZ0U6kdg11algyKd5BARbyM4TbFBepwowYSR5ClfQGCGtxNXgykpN0uF/bstWeaGDT4JWaDh8zWAHA==
+  /constant-case/2.0.0:
+    dependencies:
+      snake-case: 2.1.0
+      upper-case: 1.1.3
+    dev: false
+    resolution:
+      integrity: sha1-QXV2TTidP6nI7NKRhu1gBSQ7akY=
+  /dot-case/2.1.1:
+    dependencies:
+      no-case: 2.3.2
+    dev: false
+    resolution:
+      integrity: sha1-NNzzf1Co6TwrO8qLt/uRVcfaO+4=
   /esprima/4.0.1:
     dev: false
     engines:
@@ -77,12 +121,31 @@ packages:
       node: '>=0.4.0'
     resolution:
       integrity: sha1-Dovf5NHduIVNZOBOp8AOKgJuVlg=
+  /header-case/1.0.1:
+    dependencies:
+      no-case: 2.3.2
+      upper-case: 1.1.3
+    dev: false
+    resolution:
+      integrity: sha1-lTWXMZfBRLCWE81l0xfvGZY70C0=
   /immutable/3.8.2:
     dev: false
     engines:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-wkOZUUVbs5kT2vKBN28VMOEErfM=
+  /is-lower-case/1.1.3:
+    dependencies:
+      lower-case: 1.1.4
+    dev: false
+    resolution:
+      integrity: sha1-fhR75HaNxGbbO/shzGCzHmrWk5M=
+  /is-upper-case/1.1.2:
+    dependencies:
+      upper-case: 1.1.3
+    dev: false
+    resolution:
+      integrity: sha1-jQsfp+eTOh5YSDYA7H2WYcuvdW8=
   /js-yaml/3.12.0:
     dependencies:
       argparse: 1.0.10
@@ -97,6 +160,16 @@ packages:
       graceful-fs: 4.1.11
     resolution:
       integrity: sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=
+  /lower-case-first/1.0.2:
+    dependencies:
+      lower-case: 1.1.4
+    dev: false
+    resolution:
+      integrity: sha1-5dp8JvKacHO+AtUrrJmA5ZIq36E=
+  /lower-case/1.1.4:
+    dev: false
+    resolution:
+      integrity: sha1-miyr0bno4K6ZOkv31YdcOcQujqw=
   /monorepo-shared-assets/0.0.17:
     dependencies:
       '@types/node': 10.11.3
@@ -109,14 +182,66 @@ packages:
       node: '>= 8.9.0'
     resolution:
       integrity: sha512-A0Y2mZ06vwBR0fyZdZZPn5MJcaIcxfs7BGGv9SU82c6e6k6UwnEQWmVx4LkiVvlnwgKI7+MVIFwMwTZhRGM+eQ==
+  /no-case/2.3.2:
+    dependencies:
+      lower-case: 1.1.4
+    dev: false
+    resolution:
+      integrity: sha512-rmTZ9kz+f3rCvK2TD1Ue/oZlns7OGoIWP4fc3llxxRXlOkHKoWPPWJOfFYpITabSow43QJbRIoHQXtt10VldyQ==
+  /param-case/2.1.1:
+    dependencies:
+      no-case: 2.3.2
+    dev: false
+    resolution:
+      integrity: sha1-35T9jPZTHs915r75oIWPvHK+Ikc=
+  /pascal-case/2.0.1:
+    dependencies:
+      camel-case: 3.0.0
+      upper-case-first: 1.1.2
+    dev: false
+    resolution:
+      integrity: sha1-LVeNNFX2YNpl7KGO+VtODekSdh4=
+  /path-case/2.1.1:
+    dependencies:
+      no-case: 2.3.2
+    dev: false
+    resolution:
+      integrity: sha1-lLgDfDctP+KQbkZbtF4l0ibo7qU=
   /ramda/0.25.0:
     dev: false
     resolution:
       integrity: sha512-GXpfrYVPwx3K7RQ6aYT8KPS8XViSXUVJT1ONhoKPE9VAleW42YE+U+8VEyGWt41EnEQW7gwecYJriTI0pKoecQ==
+  /sentence-case/2.1.1:
+    dependencies:
+      no-case: 2.3.2
+      upper-case-first: 1.1.2
+    dev: false
+    resolution:
+      integrity: sha1-H24t2jnBaL+S0T+G1KkYkz9mftQ=
+  /snake-case/2.1.0:
+    dependencies:
+      no-case: 2.3.2
+    dev: false
+    resolution:
+      integrity: sha1-Qb2xtz8w7GagTU4srRt2OH1NbZ8=
   /sprintf-js/1.0.3:
     dev: false
     resolution:
       integrity: sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
+  /swap-case/1.1.2:
+    dependencies:
+      lower-case: 1.1.4
+      upper-case: 1.1.3
+    dev: false
+    resolution:
+      integrity: sha1-w5IDpFhzhfrTyFCgvRvK+ggZdOM=
+  /title-case/2.1.1:
+    dependencies:
+      no-case: 2.3.2
+      upper-case: 1.1.3
+    dev: false
+    resolution:
+      integrity: sha1-PhJyFtpY0rxb7PE3q5Ha46fNj6o=
   /tslib/1.9.3:
     dev: false
     resolution:
@@ -137,9 +262,20 @@ packages:
       node: '>= 4.0.0'
     resolution:
       integrity: sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==
+  /upper-case-first/1.1.2:
+    dependencies:
+      upper-case: 1.1.3
+    dev: false
+    resolution:
+      integrity: sha1-XXm+3P8UQZUY/S7bCgUHybaFkRU=
+  /upper-case/1.1.3:
+    dev: false
+    resolution:
+      integrity: sha1-9rRQHC7EzdJrp4vnIilh3ndiFZg=
 registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
+  change-case: ^3.0.2
   extra-jest: ^0.0.23
   require-external-programs: 'file:../../packages/require-external-programs'
