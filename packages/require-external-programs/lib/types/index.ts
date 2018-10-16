@@ -36,10 +36,12 @@ export interface ManifestClassificationList {
 export namespace ManifestClassificationList {
   export interface Base {
     readonly manifestPath: string
-    readonly manifestContent: any
+    readonly manifestContent: ManifestContent
   }
 
-  export interface Included extends Base {}
+  export interface Included extends Base {
+    readonly manifestContent: ManifestContent.Included
+  }
 
   export interface Excluded extends Base {}
 
@@ -59,11 +61,23 @@ export namespace ManifestContentList {
 
 export interface ManifestContent {
   readonly peerDependencies?: ManifestContent.DependencyDict
-  readonly [KEYNAME]?: any
+  readonly [KEYNAME]?: Requirements
 }
 
 export namespace ManifestContent {
+  export interface Included extends ManifestContent {
+    readonly peerDependencies: ManifestContent.DependencyDict.Included
+  }
+
   export interface DependencyDict {
     readonly [KEYWORD]?: string
   }
+
+  export namespace DependencyDict {
+    export interface Included extends DependencyDict {
+      readonly [KEYWORD]: string
+    }
+  }
 }
+
+export type Requirements = ReadonlyArray<string>

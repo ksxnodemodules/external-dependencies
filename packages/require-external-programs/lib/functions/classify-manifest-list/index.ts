@@ -13,8 +13,10 @@ function classifyManifestList (list: ManifestContentList): ManifestClassificatio
 
     switch (classification.type) {
       case Included:
+        included.push({ manifestContent, manifestPath } as ManifestClassificationList.Included)
+        break
       case Excluded:
-        included.push({ manifestContent, manifestPath })
+        excluded.push({ manifestContent, manifestPath })
         break
       case Invalid:
         invalid.push({ manifestContent, manifestPath, reason: classification.reason })

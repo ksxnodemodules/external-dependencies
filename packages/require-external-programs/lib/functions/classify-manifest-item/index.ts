@@ -11,11 +11,15 @@ function classifyManifestItem (content: ManifestContent): ManifestClassification
   const hasPeer = Boolean(content.peerDependencies && KEYWORD in content.peerDependencies)
   const hasKey = KEYNAME in content
 
-  return hasKey
-    ? hasPeer
-      ? INCLUDE
-      : INVALID(`Missing "${KEYWORD}" in "peerDependencies"`)
-    : EXCLUDE
+  if (!hasKey) return EXCLUDE
+  if (!hasPeer) return INVALID(`Missing "${KEYWORD}" in "peerDependencies"`)
+
+  const list = content[KEYNAME]
+  if (!Array.isArray(list)) {
+    return INVALID(`Expecting "${KEYWORD}" to be an array but received ${JSON.stringify(list)}`)
+  }
+
+  return INCLUDE
 }
 
 export = classifyManifestItem
