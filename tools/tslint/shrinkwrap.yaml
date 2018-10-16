@@ -5,10 +5,10 @@ dependencies:
   tslint-config-standard: 8.0.1
   typescript: 3.1.1
 packages:
-  /@types/node/10.11.3:
+  /@types/node/10.11.7:
     dev: false
     resolution:
-      integrity: sha512-3AvcEJAh9EMatxs+OxAlvAEs7OTy6AG94mcH1iqyVDwVVndekLxzwkWQ/Z4SDbY6GO2oyUXyWW8tQ4rENSSQVQ==
+      integrity: sha512-yOxFfkN9xUFLyvWaeYj90mlqTJ41CsQzWKS3gXdOMOyPVacUsymejKxJ4/pMW7exouubuEeZLJawGgcNGYlTeg==
   /ansi-regex/2.1.1:
     dev: false
     engines:
@@ -143,7 +143,7 @@ packages:
       integrity: sha1-Cr9PHKpbyx96nYrMbepPqqBLrJs=
   /exec-inline/0.0.1:
     dependencies:
-      '@types/node': 10.11.3
+      '@types/node': 10.11.7
       tslib: 1.9.3
     dev: false
     engines:
@@ -234,11 +234,11 @@ packages:
     dev: false
     resolution:
       integrity: sha512-AicPrAC7Qu1JxPCZ9ZgCZlY35QgFnNqc+0LtbRNxnVw4TXvjQ72wnuL9JQcEBgXkI9JM8MsT9kaQoHcpCRJOYA==
-  /semver/5.5.1:
+  /semver/5.6.0:
     dev: false
     hasBin: true
     resolution:
-      integrity: sha512-PqpAxfrEhlSUWge8dwIp4tZnQ25DIOthpiaHNIthsjEFQD6EvqUKUDM7L8O2rShkFccYo1VjJR0coWfNkCubRw==
+      integrity: sha512-RS9R6R35NYgQn++fkDWaOmqGoj4Ek9gGs+DPxNUZKuwE183xjJroKvyo1IzVFeXvUrvmALy6FWD5xrdJT25gMg==
   /sprintf-js/1.0.3:
     dev: false
     resolution:
@@ -251,6 +251,7 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-ajhfuIU9lS1f8F0Oiq+UJ43GPc8=
+      tarball: 'http://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.1.tgz'
   /supports-color/2.0.0:
     dev: false
     engines:
@@ -301,7 +302,7 @@ packages:
       js-yaml: 3.12.0
       minimatch: 3.0.4
       resolve: 1.8.1
-      semver: 5.5.1
+      semver: 5.6.0
       tslib: 1.9.3
       tsutils: 2.29.0
     dev: false
