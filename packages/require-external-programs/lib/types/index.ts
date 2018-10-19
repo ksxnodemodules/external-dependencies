@@ -1,3 +1,5 @@
+// tslint:disable:no-unnecessary-qualifier
+
 import { KEYWORD, KEYNAME } from '../constants'
 import { ManifestClassificationType } from '../enums'
 
