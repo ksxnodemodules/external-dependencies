@@ -1,2 +1,3 @@
 import Relationship from '../relationship'
-export = class extends Relationship<string, string> {}
+class Result extends Relationship<string, string> {}
+export = Result
