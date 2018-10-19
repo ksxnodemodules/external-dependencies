@@ -1,10 +1,8 @@
 import { readFile } from 'fs-extra'
 import { ManifestList, ManifestContent } from '../../types'
 import { KEYNAME } from '../../constants'
-import { Relationship, InvalidManifestError } from '../../classes'
+import { InvalidManifestError, Result } from '../../classes'
 import classifyManifestList from '../classify-manifest-list'
-
-class Result extends Relationship<string, string> {}
 
 async function loadFromManifests (list: ManifestList): Promise<Result> {
   const unclassified = await Promise.all(
