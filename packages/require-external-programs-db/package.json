@@ -1,0 +1,30 @@
+{
+  "name": "require-external-programs-db",
+  "description": "Database for require-external-programs package",
+  "version": "0.0.0",
+  "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/external-dependencies#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksxnodemodules/external-dependencies.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/external-dependencies/issues"
+  },
+  "keywords": [
+    "cache",
+    "database",
+    "external",
+    "programs",
+    "require"
+  ],
+  "dependencies": {
+    "which": "^1.3.1",
+    "cached-expression": "^0.0.0",
+    "tslib": "^1.9.3",
+    "require-external-programs-lib": "^0.0.0",
+    "@types/which": "^1.3.1",
+    "@types/node": "^10.12.0"
+  }
+}
