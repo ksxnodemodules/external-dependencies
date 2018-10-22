@@ -21,10 +21,7 @@ async function loadFromManifests (list: ManifestList): Promise<Result> {
   const result = new Result()
 
   for (const { manifestPath, manifestContent } of included) {
-    if (!manifestContent[KEYNAME]) continue
-
     const list = manifestContent[KEYNAME]
-    if (!list) continue
 
     for (const program of list) {
       result.add(manifestPath, program)

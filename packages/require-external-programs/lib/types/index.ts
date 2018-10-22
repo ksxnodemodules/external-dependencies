@@ -69,6 +69,7 @@ export interface ManifestContent {
 export namespace ManifestContent {
   export interface Included extends ManifestContent {
     readonly peerDependencies: ManifestContent.DependencyDict.Included
+    readonly [KEYNAME]: ReadonlyArray<string>
   }
 
   export interface DependencyDict {
