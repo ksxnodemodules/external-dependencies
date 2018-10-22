@@ -6,6 +6,9 @@
     "extra-jest": "^0.0.24",
     "fs-tree-utils": "^0.1.6",
     "@types/fs-extra": "^5.0.4",
-    "require-external-programs-lib": "file:../../packages/require-external-programs-lib"
+    "require-external-programs-lib": "file:../../packages/require-external-programs-lib",
+    "require-external-programs-db": "file:../../packages/require-external-programs-db",
+    "require-external-programs-utils": "file:../../packages/require-external-programs-utils"
+
   }
 }

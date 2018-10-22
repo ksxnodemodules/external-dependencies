@@ -4,7 +4,9 @@ dependencies:
   extra-jest: 0.0.24
   fs-extra: 7.0.0
   fs-tree-utils: 0.1.6
+  require-external-programs-db: 'link:../../packages/require-external-programs-db'
   require-external-programs-lib: 'link:../../packages/require-external-programs-lib'
+  require-external-programs-utils: 'link:../../packages/require-external-programs-utils'
 packages:
   /@types/fs-extra/5.0.4:
     dependencies:
@@ -289,4 +291,6 @@ specifiers:
   extra-jest: ^0.0.24
   fs-extra: ^7.0.0
   fs-tree-utils: ^0.1.6
+  require-external-programs-db: 'file:../../packages/require-external-programs-db'
   require-external-programs-lib: 'file:../../packages/require-external-programs-lib'
+  require-external-programs-utils: 'file:../../packages/require-external-programs-utils'
