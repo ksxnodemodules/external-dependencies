@@ -245,3 +245,41 @@ Map {
   "valid/node_modules/jkl/package.json" => "jkl",
 }
 `;
+
+exports[`group by manifests 1`] = `
+Map {
+  "foo/package.json" => Set {
+    "abc",
+    "def",
+    "ghi",
+  },
+  "bar/package.json" => Set {
+    "abc",
+    "jkl",
+  },
+  "baz/package.json" => Set {
+    "mno",
+  },
+}
+`;
+
+exports[`group by program 1`] = `
+Map {
+  "abc" => Set {
+    "foo/package.json",
+    "bar/package.json",
+  },
+  "def" => Set {
+    "foo/package.json",
+  },
+  "ghi" => Set {
+    "foo/package.json",
+  },
+  "jkl" => Set {
+    "bar/package.json",
+  },
+  "mno" => Set {
+    "baz/package.json",
+  },
+}
+`;

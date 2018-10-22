@@ -11,6 +11,11 @@ import defaultExport, {
   ManifestContentList
 } from 'require-external-programs-lib'
 
+import {
+  groupByManifest,
+  groupByProgram
+} from 'require-external-programs-utils'
+
 import createVirtualEnvironment from './virtual-env'
 const { apply } = createVirtualEnvironment()
 
@@ -77,4 +82,28 @@ describe('classifyManifestList', () => {
 
     expect(classifyManifestList(list)).toMatchSnapshot()
   }))
+})
+
+describe('group', () => {
+  const item =
+    (manifest: string, program: string) =>
+      ({ manifest, program })
+
+  const collection = new Set([
+    item('foo/package.json', 'abc'),
+    item('foo/package.json', 'def'),
+    item('foo/package.json', 'ghi'),
+    item('foo/package.json', 'abc'),
+    item('bar/package.json', 'abc'),
+    item('bar/package.json', 'jkl'),
+    item('baz/package.json', 'mno')
+  ])
+
+  it('by manifests', () => {
+    expect(new Map(groupByManifest(collection))).toMatchSnapshot()
+  })
+
+  it('by program', () => {
+    expect(new Map(groupByProgram(collection))).toMatchSnapshot()
+  })
 })
