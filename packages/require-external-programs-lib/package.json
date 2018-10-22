@@ -1,5 +1,6 @@
 {
   "name": "require-external-programs-lib",
+  "description": "Programmatic library for require-external-programs package",
   "version": "0.0.0",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
@@ -11,6 +12,13 @@
   "bugs": {
     "url": "https://github.com/ksxnodemodules/external-dependencies/issues"
   },
+  "keywords": [
+    "lib",
+    "api",
+    "external",
+    "programs",
+    "require"
+  ],
   "dependencies": {
     "fs-extra": "^7.0.0",
     "glob": "^7.1.3",
