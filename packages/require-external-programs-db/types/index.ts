@@ -4,6 +4,5 @@ export namespace CheckCommandsResult {
   export interface Item {
     readonly manifest: string
     readonly program: string
-    readonly satisfied: boolean
   }
 }

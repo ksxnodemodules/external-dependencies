@@ -3,14 +3,13 @@ import { CheckCommandsResult } from '../../types'
 import commandExists from '../command-exists'
 
 function checkCommands (table: Table): CheckCommandsResult {
-  const result = new Set<CheckCommandsResult.Item>()
+  const unsatisfied = new Set<CheckCommandsResult.Item>()
 
   for (const [manifest, program] of table) {
-    const satisfied = commandExists(program)
-    result.add({ manifest, program, satisfied })
+    if (!commandExists(program)) unsatisfied.add({ manifest, program })
   }
 
-  return result
+  return unsatisfied
 }
 
 export = checkCommands
