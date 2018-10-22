@@ -13,6 +13,7 @@ implements Iterable<[Title, Set<Member>]> {
   }
 
   public * [Symbol.iterator] () {
+    // @ts-ignore // WORKAROUND: ts-jest
     yield * this.data
   }
 }
