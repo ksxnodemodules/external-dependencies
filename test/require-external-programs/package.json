@@ -2,8 +2,10 @@
   "private": true,
   "dependencies": {
     "change-case": "^3.0.2",
+    "fs-extra": "^7.0.0",
     "extra-jest": "^0.0.23",
     "fs-tree-utils": "^0.1.6",
+    "@types/fs-extra": "^5.0.4",
     "require-external-programs": "file:../../packages/require-external-programs"
   }
 }

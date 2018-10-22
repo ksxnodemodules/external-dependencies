@@ -1,6 +1,8 @@
 dependencies:
+  '@types/fs-extra': 5.0.4
   change-case: 3.0.2
   extra-jest: 0.0.23
+  fs-extra: 7.0.0
   fs-tree-utils: 0.1.6
   require-external-programs: 'link:../../packages/require-external-programs'
 packages:
@@ -277,7 +279,9 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
+  '@types/fs-extra': ^5.0.4
   change-case: ^3.0.2
   extra-jest: ^0.0.23
+  fs-extra: ^7.0.0
   fs-tree-utils: ^0.1.6
   require-external-programs: 'file:../../packages/require-external-programs'
