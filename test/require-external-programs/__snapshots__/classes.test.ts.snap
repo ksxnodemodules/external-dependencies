@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`.add 1`] = `
+Object {
+  "a": Map {},
+  "b": Map {
+    0 => "zero",
+  },
+  "c": Map {
+    0 => "zero",
+    1 => "one",
+  },
+}
+`;
+
+exports[`.delete() 1`] = `
+Object {
+  "deletion": Object {
+    "del0two": false,
+    "del1one": true,
+    "del3two": false,
+  },
+  "snapshots": Object {
+    "a": Map {},
+    "b": Map {
+      0 => "zero",
+      1 => "one",
+      2 => "two",
+    },
+    "c": Map {
+      0 => "zero",
+      2 => "two",
+    },
+  },
+}
+`;
+
+exports[`.has() 1`] = `
+Object {
+  "a": Array [
+    false,
+    false,
+  ],
+  "b": Array [
+    true,
+    true,
+  ],
+  "c": Array [
+    false,
+    true,
+  ],
+}
+`;
