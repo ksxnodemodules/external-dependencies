@@ -1,4 +1,4 @@
-import { Relationship } from 'require-external-programs'
+import { Relationship } from 'require-external-programs-lib'
 class Instance extends Relationship<number, string> {}
 
 function create () {

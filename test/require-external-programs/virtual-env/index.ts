@@ -1,6 +1,6 @@
 import * as xjest from 'extra-jest'
 import * as fsTreeUtils from 'fs-tree-utils'
-import { KEYWORD, KEYNAME, ManifestContent } from 'require-external-programs'
+import { KEYWORD, KEYNAME, ManifestContent } from 'require-external-programs-lib'
 
 const virpkg =
   <Manifest extends Partial<ManifestContent>, Rest extends fsTreeUtils.Tree.Write.Object>

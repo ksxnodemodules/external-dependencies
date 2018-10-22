@@ -9,7 +9,7 @@ import defaultExport, {
   KEYWORD,
   KEYNAME,
   ManifestContentList
-} from 'require-external-programs'
+} from 'require-external-programs-lib'
 
 import createVirtualEnvironment from './virtual-env'
 const { apply } = createVirtualEnvironment()

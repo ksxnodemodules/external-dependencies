@@ -4,11 +4,11 @@ dependencies:
   extra-jest: 0.0.24
   fs-extra: 7.0.0
   fs-tree-utils: 0.1.6
-  require-external-programs: 'link:../../packages/require-external-programs'
+  require-external-programs-lib: 'link:../../packages/require-external-programs-lib'
 packages:
   /@types/fs-extra/5.0.4:
     dependencies:
-      '@types/node': 10.11.7
+      '@types/node': 10.12.0
     dev: false
     resolution:
       integrity: sha512-DsknoBvD8s+RFfSGjmERJ7ZOP1HI0UZRA3FSI+Zakhrc/Gy26YQsLI+m5V5DHxroHRJqCDLKJp7Hixn8zyaF7g==
@@ -16,10 +16,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-JRDtMPEqXrzfuYAdqbxLot1GvAr/QvicIZAnOAigZaj8xVMhuSJTg/xsv9E1TvyL+wujYhRLx9ZsQ0oFOSmwyA==
-  /@types/node/10.11.7:
-    dev: false
-    resolution:
-      integrity: sha512-yOxFfkN9xUFLyvWaeYj90mlqTJ41CsQzWKS3gXdOMOyPVacUsymejKxJ4/pMW7exouubuEeZLJawGgcNGYlTeg==
   /@types/node/10.12.0:
     dev: false
     resolution:
@@ -116,7 +112,7 @@ packages:
   /fs-tree-utils/0.1.6:
     dependencies:
       '@types/fs-extra': 5.0.4
-      '@types/node': 10.11.7
+      '@types/node': 10.12.0
       '@types/ramda': 0.25.39
       fs-extra: 7.0.0
       monorepo-shared-assets: 0.0.17
@@ -184,7 +180,7 @@ packages:
       integrity: sha1-miyr0bno4K6ZOkv31YdcOcQujqw=
   /monorepo-shared-assets/0.0.17:
     dependencies:
-      '@types/node': 10.11.7
+      '@types/node': 10.12.0
       '@types/ramda': 0.25.39
       immutable: 3.8.2
       ramda: 0.25.0
@@ -293,4 +289,4 @@ specifiers:
   extra-jest: ^0.0.24
   fs-extra: ^7.0.0
   fs-tree-utils: ^0.1.6
-  require-external-programs: 'file:../../packages/require-external-programs'
+  require-external-programs-lib: 'file:../../packages/require-external-programs-lib'
