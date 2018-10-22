@@ -3,6 +3,7 @@
   "dependencies": {
     "change-case": "^3.0.2",
     "extra-jest": "^0.0.23",
+    "fs-tree-utils": "^0.1.6",
     "require-external-programs": "file:../../packages/require-external-programs"
   }
 }
