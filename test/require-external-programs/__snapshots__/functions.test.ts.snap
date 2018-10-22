@@ -1,0 +1,247 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`allManifests lists all manifests 1`] = `
+Array [
+  "invalid/missing-dependency-in-peer/foo/package.json",
+  "invalid/missing-field-of-peer/bar/package.json",
+  "invalid/not-an-array/baz/package.json",
+  "valid/node_modules/abc-def/package.json",
+  "valid/node_modules/abc-ghi/package.json",
+  "valid/node_modules/jkl/package.json",
+  "valid/node_modules/skipped/package.json",
+]
+`;
+
+exports[`classifyManifestList matches snapshot 1`] = `
+Object {
+  "excluded": Array [
+    Object {
+      "manifestContent": Object {
+        "name": "skipped",
+        "peerDependencies": Object {
+          "require-external-programs": "*",
+        },
+      },
+      "manifestPath": "valid/node_modules/skipped/package.json",
+    },
+  ],
+  "included": Array [
+    Object {
+      "manifestContent": Object {
+        "name": "abc-def",
+        "peerDependencies": Object {
+          "require-external-programs": "*",
+        },
+        "requireExternalPrograms": Array [
+          "abc",
+          "def",
+        ],
+      },
+      "manifestPath": "valid/node_modules/abc-def/package.json",
+    },
+    Object {
+      "manifestContent": Object {
+        "name": "abc-ghi",
+        "peerDependencies": Object {
+          "require-external-programs": "*",
+        },
+        "requireExternalPrograms": Array [
+          "abc",
+          "ghi",
+        ],
+      },
+      "manifestPath": "valid/node_modules/abc-ghi/package.json",
+    },
+    Object {
+      "manifestContent": Object {
+        "name": "jkl",
+        "peerDependencies": Object {
+          "require-external-programs": "*",
+        },
+        "requireExternalPrograms": Array [
+          "jkl",
+        ],
+      },
+      "manifestPath": "valid/node_modules/jkl/package.json",
+    },
+  ],
+  "invalid": Array [
+    Object {
+      "manifestContent": Object {
+        "name": "foo",
+        "peerDependencies": Object {},
+        "requireExternalPrograms": Array [
+          "hello",
+        ],
+      },
+      "manifestPath": "invalid/missing-dependency-in-peer/foo/package.json",
+      "reason": "Missing \\"require-external-programs\\" in \\"peerDependencies\\"",
+    },
+    Object {
+      "manifestContent": Object {
+        "name": "bar",
+        "requireExternalPrograms": Array [
+          "hello",
+        ],
+      },
+      "manifestPath": "invalid/missing-field-of-peer/bar/package.json",
+      "reason": "Missing \\"require-external-programs\\" in \\"peerDependencies\\"",
+    },
+    Object {
+      "manifestContent": Object {
+        "name": "bar",
+        "peerDependencies": Object {
+          "require-external-programs": "*",
+        },
+        "requireExternalPrograms": "hello",
+      },
+      "manifestPath": "invalid/not-an-array/baz/package.json",
+      "reason": "Expecting \\"require-external-programs\\" to be an array but received \\"hello\\"",
+    },
+  ],
+}
+`;
+
+exports[`fromAllManifests throws error when received invalid data which is located in / 1`] = `
+Object {
+  "error": [InvalidManifest: Detected 3 invalid items],
+  "map": Map {
+    "invalid/missing-dependency-in-peer/foo/package.json" => Object {
+      "manifestContent": Object {
+        "name": "foo",
+        "peerDependencies": Object {},
+        "requireExternalPrograms": Array [
+          "hello",
+        ],
+      },
+      "manifestPath": "invalid/missing-dependency-in-peer/foo/package.json",
+      "reason": "Missing \\"require-external-programs\\" in \\"peerDependencies\\"",
+    },
+    "invalid/missing-field-of-peer/bar/package.json" => Object {
+      "manifestContent": Object {
+        "name": "bar",
+        "requireExternalPrograms": Array [
+          "hello",
+        ],
+      },
+      "manifestPath": "invalid/missing-field-of-peer/bar/package.json",
+      "reason": "Missing \\"require-external-programs\\" in \\"peerDependencies\\"",
+    },
+    "invalid/not-an-array/baz/package.json" => Object {
+      "manifestContent": Object {
+        "name": "bar",
+        "peerDependencies": Object {
+          "require-external-programs": "*",
+        },
+        "requireExternalPrograms": "hello",
+      },
+      "manifestPath": "invalid/not-an-array/baz/package.json",
+      "reason": "Expecting \\"require-external-programs\\" to be an array but received \\"hello\\"",
+    },
+  },
+}
+`;
+
+exports[`fromAllManifests throws error when received invalid data which is located in /invalid 1`] = `
+Object {
+  "error": [InvalidManifest: Detected 3 invalid items],
+  "map": Map {
+    "invalid/missing-dependency-in-peer/foo/package.json" => Object {
+      "manifestContent": Object {
+        "name": "foo",
+        "peerDependencies": Object {},
+        "requireExternalPrograms": Array [
+          "hello",
+        ],
+      },
+      "manifestPath": "invalid/missing-dependency-in-peer/foo/package.json",
+      "reason": "Missing \\"require-external-programs\\" in \\"peerDependencies\\"",
+    },
+    "invalid/missing-field-of-peer/bar/package.json" => Object {
+      "manifestContent": Object {
+        "name": "bar",
+        "requireExternalPrograms": Array [
+          "hello",
+        ],
+      },
+      "manifestPath": "invalid/missing-field-of-peer/bar/package.json",
+      "reason": "Missing \\"require-external-programs\\" in \\"peerDependencies\\"",
+    },
+    "invalid/not-an-array/baz/package.json" => Object {
+      "manifestContent": Object {
+        "name": "bar",
+        "peerDependencies": Object {
+          "require-external-programs": "*",
+        },
+        "requireExternalPrograms": "hello",
+      },
+      "manifestPath": "invalid/not-an-array/baz/package.json",
+      "reason": "Expecting \\"require-external-programs\\" to be an array but received \\"hello\\"",
+    },
+  },
+}
+`;
+
+exports[`fromAllManifests throws error when received invalid data which lacks "peerDependencies" 1`] = `
+Object {
+  "error": [InvalidManifest: Detected 1 invalid items],
+  "map": Map {
+    "invalid/missing-field-of-peer/bar/package.json" => Object {
+      "manifestContent": Object {
+        "name": "bar",
+        "requireExternalPrograms": Array [
+          "hello",
+        ],
+      },
+      "manifestPath": "invalid/missing-field-of-peer/bar/package.json",
+      "reason": "Missing \\"require-external-programs\\" in \\"peerDependencies\\"",
+    },
+  },
+}
+`;
+
+exports[`fromAllManifests throws error when received invalid data whose "peerDependencies" lacks "require-external-programs" 1`] = `
+Object {
+  "error": [InvalidManifest: Detected 1 invalid items],
+  "map": Map {
+    "invalid/missing-dependency-in-peer/foo/package.json" => Object {
+      "manifestContent": Object {
+        "name": "foo",
+        "peerDependencies": Object {},
+        "requireExternalPrograms": Array [
+          "hello",
+        ],
+      },
+      "manifestPath": "invalid/missing-dependency-in-peer/foo/package.json",
+      "reason": "Missing \\"require-external-programs\\" in \\"peerDependencies\\"",
+    },
+  },
+}
+`;
+
+exports[`fromAllManifests throws error when received invalid data whose "requireExternalPrograms" is not an array 1`] = `
+Object {
+  "error": [InvalidManifest: Detected 1 invalid items],
+  "map": Map {
+    "invalid/not-an-array/baz/package.json" => Object {
+      "manifestContent": Object {
+        "name": "bar",
+        "peerDependencies": Object {
+          "require-external-programs": "*",
+        },
+        "requireExternalPrograms": "hello",
+      },
+      "manifestPath": "invalid/not-an-array/baz/package.json",
+      "reason": "Expecting \\"require-external-programs\\" to be an array but received \\"hello\\"",
+    },
+  },
+}
+`;
+
+exports[`fromAllManifests works with valid data 1`] = `
+Map {
+  "valid/node_modules/abc-def/package.json" => "def",
+  "valid/node_modules/abc-ghi/package.json" => "ghi",
+  "valid/node_modules/jkl/package.json" => "jkl",
+}
+`;
