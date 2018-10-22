@@ -1,7 +1,7 @@
 dependencies:
   '@types/fs-extra': 5.0.4
   change-case: 3.0.2
-  extra-jest: 0.0.23
+  extra-jest: 0.0.24
   fs-extra: 7.0.0
   fs-tree-utils: 0.1.6
   require-external-programs: 'link:../../packages/require-external-programs'
@@ -12,10 +12,18 @@ packages:
     dev: false
     resolution:
       integrity: sha512-DsknoBvD8s+RFfSGjmERJ7ZOP1HI0UZRA3FSI+Zakhrc/Gy26YQsLI+m5V5DHxroHRJqCDLKJp7Hixn8zyaF7g==
+  /@types/js-yaml/3.11.2:
+    dev: false
+    resolution:
+      integrity: sha512-JRDtMPEqXrzfuYAdqbxLot1GvAr/QvicIZAnOAigZaj8xVMhuSJTg/xsv9E1TvyL+wujYhRLx9ZsQ0oFOSmwyA==
   /@types/node/10.11.7:
     dev: false
     resolution:
       integrity: sha512-yOxFfkN9xUFLyvWaeYj90mlqTJ41CsQzWKS3gXdOMOyPVacUsymejKxJ4/pMW7exouubuEeZLJawGgcNGYlTeg==
+  /@types/node/10.12.0:
+    dev: false
+    resolution:
+      integrity: sha512-3TUHC3jsBAB7qVRGxT6lWyYo2v96BMmD2PTcl47H25Lu7UXtFH/2qqmKiVrnel6Ne//0TFYf6uvNX+HW2FRkLQ==
   /@types/ramda/0.25.39:
     dev: false
     resolution:
@@ -76,10 +84,11 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==
-  /extra-jest/0.0.23:
+  /extra-jest/0.0.24:
     dependencies:
       '@types/fs-extra': 5.0.4
-      '@types/node': 10.11.7
+      '@types/js-yaml': 3.11.2
+      '@types/node': 10.12.0
       '@types/ramda': 0.25.39
       fs-extra: 7.0.0
       fs-tree-utils: 0.1.6
@@ -93,7 +102,7 @@ packages:
     peerDependencies:
       jest: ^23.5.0
     resolution:
-      integrity: sha512-yiDX2n1FJOUN4/uD67zNwzO/D6wQccd87A4MsPDZL562U0k5CwOlNx9sqaPe966nffQiX4ZWs4xruf5Ljb23Fw==
+      integrity: sha512-j/cbnWwEMtS2oJl1v2UJRAvOVg+vNN+LjiYyKXjws/8pDfniDna7w2VVq2pSLaqbLEoHnieqm01GJ8kw431EPQ==
   /fs-extra/7.0.0:
     dependencies:
       graceful-fs: 4.1.11
@@ -251,7 +260,7 @@ packages:
       integrity: sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
   /unique-temp-path/0.1.1:
     dependencies:
-      '@types/node': 10.11.7
+      '@types/node': 10.12.0
       tslib: 1.9.3
     dev: false
     engines:
@@ -281,7 +290,7 @@ shrinkwrapVersion: 3
 specifiers:
   '@types/fs-extra': ^5.0.4
   change-case: ^3.0.2
-  extra-jest: ^0.0.23
+  extra-jest: ^0.0.24
   fs-extra: ^7.0.0
   fs-tree-utils: ^0.1.6
   require-external-programs: 'file:../../packages/require-external-programs'
