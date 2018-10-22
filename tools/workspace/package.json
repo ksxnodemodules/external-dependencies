@@ -1,12 +1,13 @@
 {
-  "name": "@tools/monorepo",
+  "name": "@tools/workspace",
   "version": "0.0.0",
   "private": true,
+  "main": "./index.js",
+  "bin": "./bin.js",
   "dependencies": {
-    "chalk": "^2.4.1",
     "number-enum": "^3.0.0",
     "nested-workspace-helper": "^0.2.6",
-    "exec-inline": "^0.0.1",
+    "exec-inline": "^0.0.2",
     "@tools/places": "file:../places"
   }
 }
