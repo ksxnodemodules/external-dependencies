@@ -20,7 +20,12 @@ const test = {
   },
   testRegex: '(test|spec|check)\\.(jsx?|tsx?)$',
   moduleFileExtensions,
-  coveragePathIgnorePatterns
+  coveragePathIgnorePatterns,
+  globals: {
+    'ts-jest': {
+      diagnostics: false
+    }
+  }
 }
 
 const projects = [
@@ -28,10 +33,4 @@ const projects = [
   test
 ]
 
-const globals = {
-  'ts-jest': {
-    diagnostics: false
-  }
-}
-
-module.exports = { projects, globals }
+module.exports = { projects }
