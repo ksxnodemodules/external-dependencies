@@ -7,8 +7,9 @@ implements Iterable<[Title, Set<Member>]> {
     super(Map, () => new Set())
   }
 
-  public addMember (title: Title, member: Member): this {
-    this.get(title).add(member)
+  public addMember (title: Title, ...addend: Member[]): this {
+    const set = this.get(title)
+    addend.forEach(x => set.add(x))
     return this
   }
 
