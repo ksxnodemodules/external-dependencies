@@ -1,7 +1,7 @@
 import path from 'path'
 import { readFile } from 'fs-extra'
 
-import defaultExport, {
+import libDefaultExport, {
   fromAllManifests,
   allManifests,
   classifyManifestList,
@@ -21,7 +21,7 @@ const { apply } = createVirtualEnvironment()
 
 describe('default export', () => {
   it('is fromAllManifests', () => {
-    expect(defaultExport).toBe(fromAllManifests)
+    expect(libDefaultExport).toBe(fromAllManifests)
   })
 })
 
