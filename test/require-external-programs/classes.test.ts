@@ -1,4 +1,5 @@
 import { Relationship } from 'require-external-programs-lib'
+import { Grouper } from 'require-external-programs-utils'
 
 describe('Relationship', () => {
   class Instance extends Relationship<number, string> {}
@@ -51,5 +52,38 @@ describe('Relationship', () => {
     const c = snap()
 
     expect({ a, b, c }).toMatchSnapshot()
+  })
+})
+
+describe('Grouper', () => {
+  class Instance extends Grouper<string, number> {}
+
+  function create () {
+    const instance = new Instance()
+    const snap = () => new Map(instance)
+    return { instance, snap }
+  }
+
+  it('.addMember()', () => {
+    const { instance, snap } = create()
+
+    const a = snap()
+    instance.addMember('012', 0, 1, 2)
+    const b = snap()
+    instance.addMember('34', 3, 4)
+    const c = snap()
+    instance.addMember('5', 5)
+    const d = snap()
+
+    expect({ a, b, c, d }).toMatchSnapshot()
+  })
+
+  it('.toString()', () => {
+    const instance = new Instance()
+      .addMember('0', 0)
+      .addMember('12', 1, 2)
+      .addMember('345', 3, 4, 5)
+
+    expect(`\n${instance}\n`).toMatchSnapshot()
   })
 })

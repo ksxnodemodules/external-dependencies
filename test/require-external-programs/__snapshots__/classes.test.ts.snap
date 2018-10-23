@@ -1,5 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Grouper .addMember() 1`] = `
+Object {
+  "a": Map {},
+  "b": Map {
+    "012" => Set {
+      0,
+      1,
+      2,
+    },
+  },
+  "c": Map {
+    "012" => Set {
+      0,
+      1,
+      2,
+    },
+    "34" => Set {
+      3,
+      4,
+    },
+  },
+  "d": Map {
+    "012" => Set {
+      0,
+      1,
+      2,
+    },
+    "34" => Set {
+      3,
+      4,
+    },
+    "5" => Set {
+      5,
+    },
+  },
+}
+`;
+
+exports[`Grouper .toString() 1`] = `
+"
+* 0
+  - 0
+
+* 12
+  - 1
+  - 2
+
+* 345
+  - 3
+  - 4
+  - 5
+
+
+"
+`;
+
 exports[`Relationship .add 1`] = `
 Object {
   "a": Map {},
