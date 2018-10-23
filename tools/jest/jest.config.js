@@ -28,4 +28,10 @@ const projects = [
   test
 ]
 
-module.exports = { projects }
+const globals = {
+  'ts-jest': {
+    diagnostics: false
+  }
+}
+
+module.exports = { projects, globals }
