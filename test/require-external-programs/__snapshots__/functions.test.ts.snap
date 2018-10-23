@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`allManifests lists all manifests 1`] = `
+exports[`require-external-programs-lib allManifests lists all manifests 1`] = `
 Array [
   "invalid/missing-dependency-in-peer/foo/package.json",
   "invalid/missing-field-of-peer/bar/package.json",
@@ -12,7 +12,7 @@ Array [
 ]
 `;
 
-exports[`classifyManifestList matches snapshot 1`] = `
+exports[`require-external-programs-lib classifyManifestList matches snapshot 1`] = `
 Object {
   "excluded": Array [
     Object {
@@ -102,7 +102,7 @@ Object {
 }
 `;
 
-exports[`fromAllManifests throws error when received invalid data which is located in / 1`] = `
+exports[`require-external-programs-lib fromAllManifests throws error when received invalid data which is located in / 1`] = `
 Object {
   "error": [InvalidManifest: Detected 3 invalid items],
   "map": Map {
@@ -142,7 +142,7 @@ Object {
 }
 `;
 
-exports[`fromAllManifests throws error when received invalid data which is located in /invalid 1`] = `
+exports[`require-external-programs-lib fromAllManifests throws error when received invalid data which is located in /invalid 1`] = `
 Object {
   "error": [InvalidManifest: Detected 3 invalid items],
   "map": Map {
@@ -182,7 +182,7 @@ Object {
 }
 `;
 
-exports[`fromAllManifests throws error when received invalid data which lacks "peerDependencies" 1`] = `
+exports[`require-external-programs-lib fromAllManifests throws error when received invalid data which lacks "peerDependencies" 1`] = `
 Object {
   "error": [InvalidManifest: Detected 1 invalid items],
   "map": Map {
@@ -200,7 +200,7 @@ Object {
 }
 `;
 
-exports[`fromAllManifests throws error when received invalid data whose "peerDependencies" lacks "require-external-programs" 1`] = `
+exports[`require-external-programs-lib fromAllManifests throws error when received invalid data whose "peerDependencies" lacks "require-external-programs" 1`] = `
 Object {
   "error": [InvalidManifest: Detected 1 invalid items],
   "map": Map {
@@ -219,7 +219,7 @@ Object {
 }
 `;
 
-exports[`fromAllManifests throws error when received invalid data whose "requireExternalPrograms" is not an array 1`] = `
+exports[`require-external-programs-lib fromAllManifests throws error when received invalid data whose "requireExternalPrograms" is not an array 1`] = `
 Object {
   "error": [InvalidManifest: Detected 1 invalid items],
   "map": Map {
@@ -238,7 +238,7 @@ Object {
 }
 `;
 
-exports[`fromAllManifests works with valid data 1`] = `
+exports[`require-external-programs-lib fromAllManifests works with valid data 1`] = `
 Map {
   "valid/node_modules/abc-def/package.json" => "def",
   "valid/node_modules/abc-ghi/package.json" => "ghi",
@@ -246,7 +246,7 @@ Map {
 }
 `;
 
-exports[`group by manifests 1`] = `
+exports[`require-external-programs-utils group by manifests 1`] = `
 Map {
   "foo/package.json" => Set {
     "abc",
@@ -263,7 +263,7 @@ Map {
 }
 `;
 
-exports[`group by program 1`] = `
+exports[`require-external-programs-utils group by program 1`] = `
 Map {
   "abc" => Set {
     "foo/package.json",
