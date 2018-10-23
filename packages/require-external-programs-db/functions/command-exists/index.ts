@@ -1,2 +1,3 @@
 import { dbCommands } from '../../database'
-export = (command: string) => Boolean(dbCommands.calculate(command))
+const fn = (command: string) => Boolean(dbCommands.calculate(command))
+export = fn
