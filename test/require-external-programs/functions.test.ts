@@ -11,9 +11,10 @@ import libDefaultExport, {
   ManifestContentList
 } from 'require-external-programs-lib'
 
-import {
+import utilsDefaultExport, {
   groupByManifest,
-  groupByProgram
+  groupByProgram,
+  examine
 } from 'require-external-programs-utils'
 
 import createVirtualEnvironment from './virtual-env'
@@ -87,6 +88,10 @@ describe('require-external-programs-lib', () => {
 })
 
 describe('require-external-programs-utils', () => {
+  describe('default export', () => {
+    expect(utilsDefaultExport).toBe(examine)
+  })
+
   describe('group', () => {
     const item =
       (manifest: string, program: string) =>
