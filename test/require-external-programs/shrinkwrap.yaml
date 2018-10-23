@@ -1,5 +1,6 @@
 dependencies:
   '@types/fs-extra': 5.0.4
+  '@types/which': 1.3.1
   change-case: 3.0.2
   extra-jest: 0.0.24
   fs-extra: 7.0.0
@@ -7,6 +8,7 @@ dependencies:
   require-external-programs-db: 'link:../../packages/require-external-programs-db'
   require-external-programs-lib: 'link:../../packages/require-external-programs-lib'
   require-external-programs-utils: 'link:../../packages/require-external-programs-utils'
+  which: 1.3.1
 packages:
   /@types/fs-extra/5.0.4:
     dependencies:
@@ -26,6 +28,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-GJr1BOUjtdLexxQLhflMw1tCDav3csdUTC7twHx0GZUF9RTWGnJkYnUFAZE5cv1YnefgZabdfC8GvtJgVmQL7A==
+  /@types/which/1.3.1:
+    dev: false
+    resolution:
+      integrity: sha512-ZrJDWpvg75LTGX4XwuneY9s6bF3OeZcGTpoGh3zDV9ytzcHMFsRrMIaLBRJZQMBoGyKs6unBQfVdrLZiYfb1zQ==
   /argparse/1.0.10:
     dependencies:
       sprintf-js: 1.0.3
@@ -156,6 +162,10 @@ packages:
     dev: false
     resolution:
       integrity: sha1-jQsfp+eTOh5YSDYA7H2WYcuvdW8=
+  /isexe/2.0.0:
+    dev: false
+    resolution:
+      integrity: sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=
   /js-yaml/3.12.0:
     dependencies:
       argparse: 1.0.10
@@ -282,11 +292,19 @@ packages:
     dev: false
     resolution:
       integrity: sha1-9rRQHC7EzdJrp4vnIilh3ndiFZg=
+  /which/1.3.1:
+    dependencies:
+      isexe: 2.0.0
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha512-HxJdYWq1MTIQbJ3nw0cqssHoTNU267KlrDuGZ1WYlxDStUtKUhOaJmh112/TZmHxxUfuJqPXSOm7tDyas0OSIQ==
 registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   '@types/fs-extra': ^5.0.4
+  '@types/which': ^1.3.1
   change-case: ^3.0.2
   extra-jest: ^0.0.24
   fs-extra: ^7.0.0
@@ -294,3 +312,4 @@ specifiers:
   require-external-programs-db: 'file:../../packages/require-external-programs-db'
   require-external-programs-lib: 'file:../../packages/require-external-programs-lib'
   require-external-programs-utils: 'file:../../packages/require-external-programs-utils'
+  which: ^1.3.1
