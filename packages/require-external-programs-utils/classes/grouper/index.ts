@@ -12,6 +12,22 @@ implements Iterable<[Title, Set<Member>]> {
     return this
   }
 
+  public toString (): string {
+    let result = ''
+
+    for (const [title, set] of this) {
+      result += `* ${title}\n`
+
+      for (const member of set) {
+        result += `  - ${member}\n`
+      }
+
+      result += '\n'
+    }
+
+    return result
+  }
+
   public * [Symbol.iterator] () {
     yield * this.data
   }
