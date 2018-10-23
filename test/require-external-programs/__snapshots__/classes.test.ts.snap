@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`.add 1`] = `
+exports[`Relationship .add 1`] = `
 Object {
   "a": Map {},
   "b": Map {
@@ -13,7 +13,7 @@ Object {
 }
 `;
 
-exports[`.delete() 1`] = `
+exports[`Relationship .delete() 1`] = `
 Object {
   "deletion": Object {
     "del0two": false,
@@ -35,7 +35,7 @@ Object {
 }
 `;
 
-exports[`.has() 1`] = `
+exports[`Relationship .has() 1`] = `
 Object {
   "a": Array [
     false,
