@@ -1,8 +1,8 @@
 import { Relationship } from 'require-external-programs-lib'
-class Instance extends Relationship<number, string> {}
+class StrRel extends Relationship<number, string> {}
 
 function create () {
-  const instance = new Instance()
+  const instance = new StrRel()
   const snap = () => new Map(instance)
   return { instance, snap }
 }
