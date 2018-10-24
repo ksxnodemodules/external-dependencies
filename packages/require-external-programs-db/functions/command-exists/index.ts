@@ -6,4 +6,4 @@ export = (command: string) => Boolean(dbCommands.calculate(command))
 //   - DO NOT remove this
 // @ts-ignore
 // tslint:disable-next-line:no-unused-expression
-; dbCommands
+dbCommands
