@@ -3,7 +3,7 @@
 /*
   PROBLEM:
     In development mode, TypeScript files which this module is importing are not compiled,
-    but `pnpm recursive install` always run this leading to installation error
+    but `pnpm recursive install` always run this causing error to occurs
 
   SOLUTION:
     Try importing the files, ignore if it fails
