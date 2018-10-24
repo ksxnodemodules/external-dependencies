@@ -14,6 +14,7 @@ import libDefaultExport, {
 import utilsDefaultExport, {
   groupByManifest,
   groupByProgram,
+  messageFromError,
   examine
 } from 'require-external-programs-utils'
 
@@ -162,6 +163,23 @@ describe('require-external-programs-utils', () => {
 
     it('by program', () => {
       expect(new Map(groupByProgram(collection))).toMatchSnapshot()
+    })
+  })
+
+  describe('messageFromError', () => {
+    it('when error is an instance of InvalidManifest', apply(async () => {
+      await fromAllManifests('.').then(
+        () => {
+          throw new Error('Expecting promise to reject but it resolved')
+        },
+        error => {
+          expect(messageFromError(error)).toMatchSnapshot()
+        }
+      )
+    }))
+
+    it('when error is an instance of Error', () => {
+      expect(messageFromError(new Error('Hello, World!!'))).toMatchSnapshot()
     })
   })
 })

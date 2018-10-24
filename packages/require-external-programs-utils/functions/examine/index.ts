@@ -1,7 +1,8 @@
 import getTable from 'require-external-programs-lib'
 import { checkCommands } from 'require-external-programs-db'
 import { ExaminationResult } from '../../types'
-import message from '../message-from-checker-result'
+import messageFromCheckerResult from '../message-from-checker-result'
+import messageFromError from '../message-from-error'
 
 export = async (dirname: string): Promise<ExaminationResult> => {
   try {
@@ -12,7 +13,7 @@ export = async (dirname: string): Promise<ExaminationResult> => {
       ? {
         satisfied: false,
         error: false,
-        response: message(collection)
+        response: messageFromCheckerResult(collection)
       }
       : {
         satisfied: true,
@@ -22,7 +23,7 @@ export = async (dirname: string): Promise<ExaminationResult> => {
     return {
       satisfied: false,
       error: true,
-      response
+      response: messageFromError(response)
     }
   }
 }

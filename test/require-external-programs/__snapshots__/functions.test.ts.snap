@@ -373,7 +373,12 @@ Set {
 exports[`require-external-programs-utils examine when some manifest files are invalid 1`] = `
 Object {
   "error": true,
-  "response": [InvalidManifest: Detected 3 invalid items],
+  "response": "
+[[1mInvalidManifest:[22m Detected 3 invalid items]
+  * Missing \\"require-external-programs\\" in \\"peerDependencies\\" [2m(invalid/missing-dependency-in-peer/foo/package.json)[22m
+  * Missing \\"require-external-programs\\" in \\"peerDependencies\\" [2m(invalid/missing-field-of-peer/bar/package.json)[22m
+  * Expecting \\"require-external-programs\\" to be an array but received \\"hello\\" [2m(invalid/not-an-array/baz/package.json)[22m
+",
   "satisfied": false,
 }
 `;
@@ -414,4 +419,15 @@ Map {
     "baz/package.json",
   },
 }
+`;
+
+exports[`require-external-programs-utils messageFromError when error is an instance of Error 1`] = `[Error: Hello, World!!]`;
+
+exports[`require-external-programs-utils messageFromError when error is an instance of InvalidManifest 1`] = `
+"
+[[1mInvalidManifest:[22m Detected 3 invalid items]
+  * Missing \\"require-external-programs\\" in \\"peerDependencies\\" [2m(invalid/missing-dependency-in-peer/foo/package.json)[22m
+  * Missing \\"require-external-programs\\" in \\"peerDependencies\\" [2m(invalid/missing-field-of-peer/bar/package.json)[22m
+  * Expecting \\"require-external-programs\\" to be an array but received \\"hello\\" [2m(invalid/not-an-array/baz/package.json)[22m
+"
 `;
