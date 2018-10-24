@@ -1,7 +1,7 @@
 dependencies:
   '@types/node': 10.12.0
   '@types/which': 1.3.1
-  cached-expression: 0.0.0
+  cached-expression: 0.0.1
   require-external-programs-lib: 'link:../require-external-programs-lib'
   tslib: 1.9.3
   which: 1.3.1
@@ -14,7 +14,7 @@ packages:
     dev: false
     resolution:
       integrity: sha512-ZrJDWpvg75LTGX4XwuneY9s6bF3OeZcGTpoGh3zDV9ytzcHMFsRrMIaLBRJZQMBoGyKs6unBQfVdrLZiYfb1zQ==
-  /cached-expression/0.0.0:
+  /cached-expression/0.0.1:
     dependencies:
       '@types/node': 10.12.0
       tslib: 1.9.3
@@ -22,7 +22,7 @@ packages:
     engines:
       node: '>= 8.9.0'
     resolution:
-      integrity: sha512-9OmNuSG4Xi2Xa6V5AiAEJokwf19Ph8Fivt3SQd7ZMNqVC2LPVCWN/Rnui6x6yVBFk7BW0EzGCrO3TQN7V3Vp3Q==
+      integrity: sha512-Yp+actpZDKEmiU9h2Nf85BHrRxkJiqvMoLqUZLmU2d4vJP+lZ67H75HWn5Wr1JABnYEOlgwPL6bFsNWJoQWp8g==
   /isexe/2.0.0:
     dev: false
     resolution:
@@ -44,7 +44,7 @@ shrinkwrapVersion: 3
 specifiers:
   '@types/node': ^10.12.0
   '@types/which': ^1.3.1
-  cached-expression: ^0.0.0
+  cached-expression: ^0.0.1
   require-external-programs-lib: ^0.0.0
   tslib: ^1.9.3
   which: ^1.3.1
