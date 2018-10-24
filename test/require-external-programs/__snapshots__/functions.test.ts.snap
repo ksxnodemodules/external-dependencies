@@ -246,6 +246,122 @@ Map {
 }
 `;
 
+exports[`require-external-programs-utils examine when all is not satisfied 1`] = `
+"
+[2m* [22m[1mabc[22m
+[2m  - [22m[2m[3mrequired by [23m[22m[3mvalid/node_modules/abc-def/package.json[23m
+[2m  - [22m[2m[3mrequired by [23m[22m[3mvalid/node_modules/abc-ghi/package.json[23m
+
+[2m* [22m[1mdef[22m
+[2m  - [22m[2m[3mrequired by [23m[22m[3mvalid/node_modules/abc-def/package.json[23m
+
+[2m* [22m[1mghi[22m
+[2m  - [22m[2m[3mrequired by [23m[22m[3mvalid/node_modules/abc-ghi/package.json[23m
+
+[2m* [22m[1mjkl[22m
+[2m  - [22m[2m[3mrequired by [23m[22m[3mvalid/node_modules/jkl/package.json[23m
+
+"
+`;
+
+exports[`require-external-programs-utils examine when all is not satisfied 2`] = `
+Set {
+  Array [
+    "abc",
+    Object {
+      "nothrow": true,
+    },
+  ],
+  Array [
+    "def",
+    Object {
+      "nothrow": true,
+    },
+  ],
+  Array [
+    "ghi",
+    Object {
+      "nothrow": true,
+    },
+  ],
+  Array [
+    "jkl",
+    Object {
+      "nothrow": true,
+    },
+  ],
+}
+`;
+
+exports[`require-external-programs-utils examine when all is satisfied 1`] = `
+Set {
+  Array [
+    "abc",
+    Object {
+      "nothrow": true,
+    },
+  ],
+  Array [
+    "def",
+    Object {
+      "nothrow": true,
+    },
+  ],
+  Array [
+    "ghi",
+    Object {
+      "nothrow": true,
+    },
+  ],
+  Array [
+    "jkl",
+    Object {
+      "nothrow": true,
+    },
+  ],
+}
+`;
+
+exports[`require-external-programs-utils examine when only some is satisfied 1`] = `
+"
+[2m* [22m[1mghi[22m
+[2m  - [22m[2m[3mrequired by [23m[22m[3mvalid/node_modules/abc-ghi/package.json[23m
+
+[2m* [22m[1mjkl[22m
+[2m  - [22m[2m[3mrequired by [23m[22m[3mvalid/node_modules/jkl/package.json[23m
+
+"
+`;
+
+exports[`require-external-programs-utils examine when only some is satisfied 2`] = `
+Set {
+  Array [
+    "abc",
+    Object {
+      "nothrow": true,
+    },
+  ],
+  Array [
+    "def",
+    Object {
+      "nothrow": true,
+    },
+  ],
+  Array [
+    "ghi",
+    Object {
+      "nothrow": true,
+    },
+  ],
+  Array [
+    "jkl",
+    Object {
+      "nothrow": true,
+    },
+  ],
+}
+`;
+
 exports[`require-external-programs-utils group by manifests 1`] = `
 Map {
   "foo/package.json" => Set {

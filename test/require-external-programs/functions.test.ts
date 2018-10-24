@@ -20,6 +20,8 @@ import utilsDefaultExport, {
 import createVirtualEnvironment from './virtual-env'
 const { apply } = createVirtualEnvironment()
 
+import * as whichMockData from './__mocks__/which/data'
+
 describe('require-external-programs-lib', () => {
   describe('default export', () => {
     it('is fromAllManifests', () => {
@@ -90,6 +92,44 @@ describe('require-external-programs-lib', () => {
 describe('require-external-programs-utils', () => {
   describe('default export', () => {
     expect(utilsDefaultExport).toBe(examine)
+  })
+
+  describe('examine', () => {
+    it('when all is satisfied', apply(async () => {
+      const { getParams } = whichMockData.mockSync(cmd => `/bin/${cmd}`)
+      const message = await examine('valid')
+      const params = getParams()
+      whichMockData.restoreAll()
+
+      expect(message).toBe(false)
+      expect(params).toMatchSnapshot()
+    }))
+
+    it('when all is not satisfied', apply(async () => {
+      const { getParams } = whichMockData.mockSync(() => null)
+      const message = await examine('valid')
+      const params = getParams()
+      whichMockData.restoreAll()
+
+      expect(message).not.toBe(false)
+      expect(message).toMatchSnapshot()
+      expect(params).toMatchSnapshot()
+    }))
+
+    it('when only some is satisfied', apply(async () => {
+      const availables = ['abc', 'def']
+
+      const { getParams } = whichMockData
+        .mockSync(cmd => availables.includes(cmd) ? `/bin/${cmd}` : null)
+
+      const message = await examine('valid')
+      const params = getParams()
+      whichMockData.restoreAll()
+
+      expect(message).not.toBe(false)
+      expect(message).toMatchSnapshot()
+      expect(params).toMatchSnapshot()
+    }))
   })
 
   describe('group', () => {
