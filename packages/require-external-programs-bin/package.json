@@ -16,7 +16,7 @@
     "require-external-programs": "./bin/index"
   },
   "keywords": [
-    "utility",
+    "executable",
     "external",
     "programs",
     "require"
