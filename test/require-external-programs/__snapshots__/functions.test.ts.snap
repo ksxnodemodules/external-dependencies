@@ -247,7 +247,9 @@ Map {
 `;
 
 exports[`require-external-programs-utils examine when all is not satisfied 1`] = `
-"
+Object {
+  "error": false,
+  "response": "
 [2m* [22m[1mabc[22m
 [2m  - [22m[2m[3mrequired by [23m[22m[3mvalid/node_modules/abc-def/package.json[23m
 [2m  - [22m[2m[3mrequired by [23m[22m[3mvalid/node_modules/abc-ghi/package.json[23m
@@ -261,7 +263,9 @@ exports[`require-external-programs-utils examine when all is not satisfied 1`] =
 [2m* [22m[1mjkl[22m
 [2m  - [22m[2m[3mrequired by [23m[22m[3mvalid/node_modules/jkl/package.json[23m
 
-"
+",
+  "satisfied": false,
+}
 `;
 
 exports[`require-external-programs-utils examine when all is not satisfied 2`] = `
@@ -323,14 +327,18 @@ Set {
 `;
 
 exports[`require-external-programs-utils examine when only some is satisfied 1`] = `
-"
+Object {
+  "error": false,
+  "response": "
 [2m* [22m[1mghi[22m
 [2m  - [22m[2m[3mrequired by [23m[22m[3mvalid/node_modules/abc-ghi/package.json[23m
 
 [2m* [22m[1mjkl[22m
 [2m  - [22m[2m[3mrequired by [23m[22m[3mvalid/node_modules/jkl/package.json[23m
 
-"
+",
+  "satisfied": false,
+}
 `;
 
 exports[`require-external-programs-utils examine when only some is satisfied 2`] = `
@@ -359,6 +367,14 @@ Set {
       "nothrow": true,
     },
   ],
+}
+`;
+
+exports[`require-external-programs-utils examine when some manifest files are invalid 1`] = `
+Object {
+  "error": true,
+  "response": [InvalidManifest: Detected 3 invalid items],
+  "satisfied": false,
 }
 `;
 

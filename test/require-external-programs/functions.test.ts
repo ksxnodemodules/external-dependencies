@@ -97,22 +97,22 @@ describe('require-external-programs-utils', () => {
   describe('examine', () => {
     it('when all is satisfied', apply(async () => {
       const { getParams } = whichMockData.mockSync(cmd => `/bin/${cmd}`)
-      const message = await examine('valid')
+      const result = await examine('valid')
       const params = getParams()
       whichMockData.restoreAll()
 
-      expect(message).toBe(false)
+      expect(result).toMatchObject({ satisfied: true, error: false })
       expect(params).toMatchSnapshot()
     }))
 
     it('when all is not satisfied', apply(async () => {
       const { getParams } = whichMockData.mockSync(() => null)
-      const message = await examine('valid')
+      const result = await examine('valid')
       const params = getParams()
       whichMockData.restoreAll()
 
-      expect(message).not.toBe(false)
-      expect(message).toMatchSnapshot()
+      expect(result).toMatchObject({ satisfied: false, error: false })
+      expect(result).toMatchSnapshot()
       expect(params).toMatchSnapshot()
     }))
 
@@ -122,13 +122,22 @@ describe('require-external-programs-utils', () => {
       const { getParams } = whichMockData
         .mockSync(cmd => availables.includes(cmd) ? `/bin/${cmd}` : null)
 
-      const message = await examine('valid')
+      const result = await examine('valid')
       const params = getParams()
       whichMockData.restoreAll()
 
-      expect(message).not.toBe(false)
-      expect(message).toMatchSnapshot()
+      expect(result).toMatchObject({ satisfied: false, error: false })
+      expect(result).toMatchSnapshot()
       expect(params).toMatchSnapshot()
+    }))
+
+    it('when some manifest files are invalid', apply(async () => {
+      whichMockData.mockSync(() => null)
+      const result = await examine('.')
+      whichMockData.restoreAll()
+
+      expect(result).toMatchObject({ satisfied: false, error: true })
+      expect(result).toMatchSnapshot()
     }))
   })
 
