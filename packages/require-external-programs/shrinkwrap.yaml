@@ -1,5 +1,6 @@
 dependencies:
   '@types/node': 10.12.0
+  just-try: 2.1.0
   require-external-programs-bin: 'link:../require-external-programs-bin'
   require-external-programs-utils: 'link:../require-external-programs-utils'
   tslib: 1.9.3
@@ -8,6 +9,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-3TUHC3jsBAB7qVRGxT6lWyYo2v96BMmD2PTcl47H25Lu7UXtFH/2qqmKiVrnel6Ne//0TFYf6uvNX+HW2FRkLQ==
+  /just-try/2.1.0:
+    dev: false
+    engines:
+      node: '>= 6.0.0'
+    resolution:
+      integrity: sha512-HNFKMZJdXL/zpj2zbzocF9gn3RgEHFSBZ9Xpk1riWcXI+xtZaqMFDReXZOpVy80Wixy99tYwSdHopWPiUzFKxg==
   /tslib/1.9.3:
     dev: false
     resolution:
@@ -17,5 +24,6 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   '@types/node': ^10.12.0
+  just-try: ^2.1.0
   require-external-programs-bin: ^0.0.0
   tslib: ^1.9.3

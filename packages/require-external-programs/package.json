@@ -26,6 +26,7 @@
     "install": "node ./install"
   },
   "dependencies": {
+    "just-try": "^2.1.0",
     "tslib": "^1.9.3",
     "require-external-programs-bin": "^0.0.0",
     "@types/node": "^10.12.0"

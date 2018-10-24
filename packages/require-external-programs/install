@@ -1,2 +1,20 @@
 #! /usr/bin/env node
-require(require('require-external-programs-bin').bin)
+
+/*
+  PROBLEM:
+    In development mode, TypeScript files which this module is importing are not compiled,
+    but `pnpm recursive install` always run this leading to installation error
+
+  SOLUTION:
+    Try importing the files, ignore if it fails
+*/
+
+const jtry = require('just-try')
+
+const executable = jtry(
+  () => require('require-external-programs-bin').bin,
+  () => false
+)
+
+// Errors come from `executable` must not be ignored
+if (executable) require(executable)
