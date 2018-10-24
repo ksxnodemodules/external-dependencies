@@ -1,0 +1,33 @@
+{
+  "name": "require-external-programs-bin",
+  "description": "Prevent user from installing your package without required executables",
+  "version": "0.0.0",
+  "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/ksxnodemodules/external-dependencies#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksxnodemodules/external-dependencies.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ksxnodemodules/external-dependencies/issues"
+  },
+  "bin": {
+    "require-external-programs": "./bin/index"
+  },
+  "keywords": [
+    "external",
+    "programs",
+    "require",
+    "install",
+    "script"
+  ],
+  "scripts": {
+    "install": "node ./install"
+  },
+  "dependencies": {
+    "tslib": "^1.9.3",
+    "require-external-programs-bin": "^0.0.0",
+    "@types/node": "^10.12.0"
+  }
+}
