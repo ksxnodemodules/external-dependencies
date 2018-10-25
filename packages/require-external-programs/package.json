@@ -12,9 +12,6 @@
   "bugs": {
     "url": "https://github.com/ksxnodemodules/external-dependencies/issues"
   },
-  "bin": {
-    "require-external-programs": "./bin/index"
-  },
   "keywords": [
     "external",
     "programs",
