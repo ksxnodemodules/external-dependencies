@@ -94,7 +94,7 @@ function createFactory (container?: string) {
             [KEYWORD]: '*'
           }
         })
-      },
+      }
     }
   }, container)
 }
