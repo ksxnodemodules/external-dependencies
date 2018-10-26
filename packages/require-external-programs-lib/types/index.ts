@@ -62,6 +62,7 @@ export namespace ManifestContentList {
 }
 
 export interface ManifestContent {
+  readonly dependencies?: {}
   readonly peerDependencies?: ManifestContent.DependencyDict
   readonly [KEYNAME]?: Requirements
 }

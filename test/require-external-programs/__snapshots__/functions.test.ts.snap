@@ -2,6 +2,7 @@
 
 exports[`require-external-programs-lib allManifests lists all manifests 1`] = `
 Array [
+  "invalid/found-dependency-in-prod/qux/package.json",
   "invalid/missing-dependency-in-peer/foo/package.json",
   "invalid/missing-field-of-peer/bar/package.json",
   "invalid/not-an-array/baz/package.json",
@@ -68,6 +69,19 @@ Object {
   "invalid": Array [
     Object {
       "manifestContent": Object {
+        "dependencies": Object {
+          "require-external-programs": "*",
+        },
+        "name": "qux",
+        "peerDependencies": Object {
+          "require-external-programs": "*",
+        },
+      },
+      "manifestPath": "invalid/found-dependency-in-prod/qux/package.json",
+      "reason": "Found \\"require-external-programs\\" in \\"dependencies\\", use a combination of \\"peerDependencies\\" and \\"dependencies\\" instead",
+    },
+    Object {
+      "manifestContent": Object {
         "name": "foo",
         "peerDependencies": Object {},
         "requireExternalPrograms": Array [
@@ -104,8 +118,21 @@ Object {
 
 exports[`require-external-programs-lib fromAllManifests throws error when received invalid data which is located in / 1`] = `
 Object {
-  "error": [InvalidManifest: Detected 3 invalid items],
+  "error": [InvalidManifest: Detected 4 invalid items],
   "map": Map {
+    "invalid/found-dependency-in-prod/qux/package.json" => Object {
+      "manifestContent": Object {
+        "dependencies": Object {
+          "require-external-programs": "*",
+        },
+        "name": "qux",
+        "peerDependencies": Object {
+          "require-external-programs": "*",
+        },
+      },
+      "manifestPath": "invalid/found-dependency-in-prod/qux/package.json",
+      "reason": "Found \\"require-external-programs\\" in \\"dependencies\\", use a combination of \\"peerDependencies\\" and \\"dependencies\\" instead",
+    },
     "invalid/missing-dependency-in-peer/foo/package.json" => Object {
       "manifestContent": Object {
         "name": "foo",
@@ -144,8 +171,21 @@ Object {
 
 exports[`require-external-programs-lib fromAllManifests throws error when received invalid data which is located in /invalid 1`] = `
 Object {
-  "error": [InvalidManifest: Detected 3 invalid items],
+  "error": [InvalidManifest: Detected 4 invalid items],
   "map": Map {
+    "invalid/found-dependency-in-prod/qux/package.json" => Object {
+      "manifestContent": Object {
+        "dependencies": Object {
+          "require-external-programs": "*",
+        },
+        "name": "qux",
+        "peerDependencies": Object {
+          "require-external-programs": "*",
+        },
+      },
+      "manifestPath": "invalid/found-dependency-in-prod/qux/package.json",
+      "reason": "Found \\"require-external-programs\\" in \\"dependencies\\", use a combination of \\"peerDependencies\\" and \\"dependencies\\" instead",
+    },
     "invalid/missing-dependency-in-peer/foo/package.json" => Object {
       "manifestContent": Object {
         "name": "foo",
@@ -374,7 +414,8 @@ exports[`require-external-programs-utils examine when some manifest files are in
 Object {
   "error": true,
   "response": "
-[[1mInvalidManifest:[22m Detected 3 invalid items]
+[[1mInvalidManifest:[22m Detected 4 invalid items]
+  * Found \\"require-external-programs\\" in \\"dependencies\\", use a combination of \\"peerDependencies\\" and \\"dependencies\\" instead [2m(invalid/found-dependency-in-prod/qux/package.json)[22m
   * Missing \\"require-external-programs\\" in \\"peerDependencies\\" [2m(invalid/missing-dependency-in-peer/foo/package.json)[22m
   * Missing \\"require-external-programs\\" in \\"peerDependencies\\" [2m(invalid/missing-field-of-peer/bar/package.json)[22m
   * Expecting \\"require-external-programs\\" to be an array but received \\"hello\\" [2m(invalid/not-an-array/baz/package.json)[22m
@@ -425,7 +466,8 @@ exports[`require-external-programs-utils messageFromError when error is an insta
 
 exports[`require-external-programs-utils messageFromError when error is an instance of InvalidManifest 1`] = `
 "
-[[1mInvalidManifest:[22m Detected 3 invalid items]
+[[1mInvalidManifest:[22m Detected 4 invalid items]
+  * Found \\"require-external-programs\\" in \\"dependencies\\", use a combination of \\"peerDependencies\\" and \\"dependencies\\" instead [2m(invalid/found-dependency-in-prod/qux/package.json)[22m
   * Missing \\"require-external-programs\\" in \\"peerDependencies\\" [2m(invalid/missing-dependency-in-peer/foo/package.json)[22m
   * Missing \\"require-external-programs\\" in \\"peerDependencies\\" [2m(invalid/missing-field-of-peer/bar/package.json)[22m
   * Expecting \\"require-external-programs\\" to be an array but received \\"hello\\" [2m(invalid/not-an-array/baz/package.json)[22m

@@ -82,7 +82,19 @@ function createFactory (container?: string) {
           },
           [KEYNAME]: 'hello' as any
         })
-      }
+      },
+
+      'found-dependency-in-prod': {
+        'qux': virpkg({
+          name: 'qux',
+          dependencies: {
+            [KEYWORD]: '*'
+          },
+          peerDependencies: {
+            [KEYWORD]: '*'
+          }
+        })
+      },
     }
   }, container)
 }
