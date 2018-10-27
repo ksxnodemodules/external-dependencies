@@ -15,7 +15,8 @@ import utilsDefaultExport, {
   groupByManifest,
   groupByProgram,
   messageFromError,
-  examine
+  examine,
+  execute
 } from 'require-external-programs-utils'
 
 import createVirtualEnvironment from './virtual-env'
@@ -92,7 +93,7 @@ describe('require-external-programs-lib', () => {
 
 describe('require-external-programs-utils', () => {
   describe('default export', () => {
-    expect(utilsDefaultExport).toBe(examine)
+    expect(utilsDefaultExport).toBe(execute)
   })
 
   describe('examine', () => {

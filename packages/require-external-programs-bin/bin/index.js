@@ -1,17 +1,9 @@
 #! /usr/bin/env node
 const process = require('process')
-const { examine, ExitStatusCodes } = require('require-external-programs-utils')
-const { Satisfied, Unsatisfied, CaughtException, UncaughtException } = ExitStatusCodes
+const { execute } = require('require-external-programs-utils')
 
-examine(process.cwd()).then(
-  result => {
-    if (result.satisfied) return process.exit(Satisfied)
-    if (!result.error) return process.exit(Unsatisfied)
-    console.error(result.response)
-    process.exit(CaughtException)
-  },
-  error => {
-    console.error(error)
-    process.exit(UncaughtException)
-  }
+execute(
+  process.cwd(),
+  error => console.error(error),
+  status => process.exit(status)
 )

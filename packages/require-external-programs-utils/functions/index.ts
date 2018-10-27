@@ -6,6 +6,7 @@ import messageFromCheckerResult from './message-from-checker-result'
 import messageFromInvalidManifestError from './message-from-invalid-manifest-error'
 import messageFromError from './message-from-error'
 import examine from './examine'
+import execute from './execute'
 
 export {
   group,
@@ -15,5 +16,6 @@ export {
   messageFromCheckerResult,
   messageFromInvalidManifestError,
   messageFromError,
-  examine
+  examine,
+  execute
 }
