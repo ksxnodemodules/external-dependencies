@@ -2,7 +2,7 @@ import path from 'path'
 import changeCase from 'change-case'
 import { scripts } from 'require-external-programs'
 import { bin } from 'require-external-programs-bin'
-import { KEYWORD, KEYNAME } from 'require-external-programs-lib'
+import { KEYWORD, KEYNAME, VERSION } from 'require-external-programs-lib'
 
 describe('require-external-programs', () => {
   it('scripts', () => {
@@ -59,5 +59,11 @@ describe('require-external-programs-lib', () => {
 
   it('KEYNAME is lower camel case of KEYWORD', () => {
     expect(KEYNAME).toBe(changeCase.camel(KEYWORD))
+  })
+
+  it('VERSION to match require-external-programs/package.json/version', () => {
+    expect(VERSION).toBe(
+      require('require-external-programs/package.json').version
+    )
   })
 })
