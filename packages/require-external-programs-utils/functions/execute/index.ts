@@ -9,8 +9,8 @@ export = <Return>(
 ) => examine(dirname).then(
   result => {
     if (result.satisfied) return exit(Satisfied)
-    if (!result.error) return exit(Unsatisfied)
     log(result.response)
+    if (!result.error) return exit(Unsatisfied)
     return exit(CaughtException)
   },
   error => {
