@@ -20,7 +20,7 @@
     "script"
   ],
   "scripts": {
-    "install": "node ./install"
+    "install": "node install.js"
   },
   "dependencies": {
     "just-try": "^2.1.0",
