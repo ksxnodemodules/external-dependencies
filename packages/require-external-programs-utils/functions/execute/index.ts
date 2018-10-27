@@ -15,6 +15,6 @@ export = <Return>(
   },
   error => {
     log(error)
-    exit(UncaughtException)
+    return exit(UncaughtException)
   }
 )
