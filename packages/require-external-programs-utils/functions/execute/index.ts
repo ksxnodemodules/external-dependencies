@@ -10,8 +10,7 @@ export = <Return>(
   result => {
     if (result.satisfied) return exit(Satisfied)
     log(result.response)
-    if (!result.error) return exit(Unsatisfied)
-    return exit(CaughtException)
+    return exit(result.error ? CaughtException : Unsatisfied)
   },
   error => {
     log(error)
