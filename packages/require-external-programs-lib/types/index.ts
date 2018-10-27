@@ -62,15 +62,29 @@ export namespace ManifestContentList {
 }
 
 export interface ManifestContent {
-  readonly dependencies?: {}
-  readonly peerDependencies?: ManifestContent.DependencyDict
+  readonly dependencies?: ManifestContent.DependencyDict
+  readonly devDependencies?: ManifestContent.DependencyDict
+  readonly peerDependencies?: {}
   readonly [KEYNAME]?: Requirements
 }
 
 export namespace ManifestContent {
-  export interface Included extends ManifestContent {
-    readonly peerDependencies: ManifestContent.DependencyDict.Included
-    readonly [KEYNAME]: ReadonlyArray<string>
+  export type Included =
+    Included.AsProd |
+    Included.AsDev
+
+  export namespace Included {
+    export interface Base extends ManifestContent {
+      readonly [KEYNAME]: Requirements
+    }
+
+    export interface AsProd extends Base {
+      readonly dependencies: DependencyDict.Included
+    }
+
+    export interface AsDev extends Base {
+      readonly devDependencies: DependencyDict.Included
+    }
   }
 
   export interface DependencyDict {

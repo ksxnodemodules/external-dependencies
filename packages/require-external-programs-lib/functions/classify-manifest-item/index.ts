@@ -1,5 +1,6 @@
+import semver from 'semver'
 import { ManifestContent, ManifestClassification } from '../../types'
-import { KEYWORD, KEYNAME } from '../../constants'
+import { KEYWORD, KEYNAME, VERSION } from '../../constants'
 import { ManifestClassificationType } from '../../enums'
 const { Included, Excluded, Invalid } = ManifestClassificationType
 
@@ -8,17 +9,29 @@ const EXCLUDE: ManifestClassification.Excluded = { type: Excluded }
 const INVALID = (reason: string): ManifestClassification.Invalid => ({ type: Invalid, reason })
 
 function classifyManifestItem (content: ManifestContent): ManifestClassification {
-  if (content.dependencies && KEYWORD in content.dependencies) {
-    const message = `Found "${KEYWORD}" in "dependencies"`
-    const advice = `use a combination of "peerDependencies" and "dependencies" instead`
-    return INVALID(`${message}, ${advice}`)
+  if (content.peerDependencies && KEYWORD in content.peerDependencies) {
+    return INVALID(`Found "${KEYWORD}" in "peerDependencies", use "dependencies" instead`)
   }
 
   if (!(KEYNAME in content)) return EXCLUDE
 
-  if (!(content.peerDependencies && KEYWORD in content.peerDependencies)) {
-    return INVALID(`Missing "${KEYWORD}" in "peerDependencies"`)
+  if (content.dependencies && KEYWORD in content.dependencies) {
+    return classifyByDependency(content.dependencies as any, content as any)
   }
+
+  if (content.devDependencies && KEYWORD in content.devDependencies) {
+    return classifyByDependency(content.devDependencies as any, content as any)
+  }
+
+  return INVALID(`Found "${KEYNAME}" but not "${KEYWORD}" in either "dependencies" or "devDependencies"`)
+}
+
+function classifyByDependency (
+  dict: ManifestContent.DependencyDict.Included,
+  content: ManifestContent.Included
+): ManifestClassification {
+  const versionRange = dict[KEYWORD]
+  if (!semver.satisfies(VERSION, versionRange)) return EXCLUDE
 
   const list = content[KEYNAME]
   if (!Array.isArray(list)) {

@@ -15,7 +15,7 @@ function createFactory (container?: string) {
       node_modules: {
         'abc-def': virpkg({
           name: 'abc-def',
-          peerDependencies: {
+          dependencies: {
             [KEYWORD]: '*'
           },
           [KEYNAME]: [
@@ -26,7 +26,7 @@ function createFactory (container?: string) {
 
         'abc-ghi': virpkg({
           name: 'abc-ghi',
-          peerDependencies: {
+          devDependencies: {
             [KEYWORD]: '*'
           },
           [KEYNAME]: [
@@ -37,7 +37,7 @@ function createFactory (container?: string) {
 
         'jkl': virpkg({
           name: 'jkl',
-          peerDependencies: {
+          dependencies: {
             [KEYWORD]: '*'
           },
           [KEYNAME]: [
@@ -45,27 +45,38 @@ function createFactory (container?: string) {
           ]
         }),
 
-        'skipped': virpkg({
-          name: 'skipped',
-          peerDependencies: {
+        'missing-activation-key': virpkg({
+          name: 'missing-activation-key',
+          devDependencies: {
             [KEYWORD]: '*'
           }
+        }),
+
+        'mismatched-version': virpkg({
+          name: 'mismatched-version',
+          dependencies: {
+            [KEYWORD]: '> 999 < 1' // This range is meant to be impossible
+          },
+          [KEYNAME]: [
+            'hello'
+          ]
         })
       }
     },
 
     invalid: {
-      'missing-dependency-in-peer': {
+      'missing-field-in-dependency-dict': {
         'foo': virpkg({
           name: 'foo',
-          peerDependencies: {},
+          dependencies: {},
+          devDependencies: {},
           [KEYNAME]: [
             'hello'
           ]
         })
       },
 
-      'missing-field-of-peer': {
+      'lack-dependency-dicts': {
         'bar': virpkg({
           name: 'bar',
           [KEYNAME]: [
@@ -77,14 +88,14 @@ function createFactory (container?: string) {
       'not-an-array': {
         'baz': virpkg({
           name: 'bar',
-          peerDependencies: {
+          dependencies: {
             [KEYWORD]: '*'
           },
           [KEYNAME]: 'hello' as any
         })
       },
 
-      'found-dependency-in-prod': {
+      'found-dependency-in-peer': {
         'qux': virpkg({
           name: 'qux',
           dependencies: {

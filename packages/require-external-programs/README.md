@@ -12,10 +12,7 @@ Add this to your `package.json`:
 
 ```json
 {
-  "devDependencies": {
-    "require-external-programs": "<version range>"
-  },
-  "peerDependencies": {
+  "dependencies": {
     "require-external-programs": "<version range>"
   },
   "requireExternalPrograms": [

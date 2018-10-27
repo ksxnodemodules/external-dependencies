@@ -60,8 +60,8 @@ describe('require-external-programs-lib', () => {
         )
       })
 
-      it(`whose "peerDependencies" lacks "${KEYWORD}"`, mkfn('invalid', 'missing-dependency-in-peer'))
-      it('which lacks "peerDependencies"', mkfn('invalid', 'missing-field-of-peer'))
+      it(`whose "dependencies" and "devDependencies" lack "${KEYWORD}"`, mkfn('invalid', 'missing-field-in-dependency-dict'))
+      it('which lacks both "dependencies" and "devDependencies', mkfn('invalid', 'lack-dependency-dicts'))
       it(`whose "${KEYNAME}" is not an array`, mkfn('invalid', 'not-an-array'))
       it('which is located in /invalid', mkfn('invalid'))
       it('which is located in /', mkfn())
