@@ -6,7 +6,7 @@ export = <Return>(
   dirname: string,
   log: (error: any) => void,
   exit: (status: ExitStatusCodes) => Return
-) => examine(dirname).then(
+): Promise<Return> => examine(dirname).then(
   result => {
     if (result.satisfied) return exit(Satisfied)
     log(result.response)
