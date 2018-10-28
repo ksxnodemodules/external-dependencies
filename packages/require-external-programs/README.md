@@ -24,8 +24,7 @@ Add this to your `package.json`:
 
 ## Notes
 
-* This package assumes that `process.cwd()` is the root of your project.
-* Don't add this package to `"dependencies"` section of `package.json` if you don't want it to run multiple times.
+* This package assumes you run `npm install` at the root of your project.
 
 ## License
 
