@@ -1,3 +1,3 @@
 export const KEYWORD = 'require-external-programs'
 export const KEYNAME = 'requireExternalPrograms'
-export const VERSION = '0.0.4'
+export const VERSION = '0.0.5'
