@@ -204,7 +204,7 @@ describe('require-external-programs-utils', () => {
       const params = getParams()
       whichMockData.restoreAll()
 
-      expect(params.exitParams).toEqual([[ExitStatusCodes.CaughtException]])
+      expect(params.exitParams).toEqual([[ExitStatusCodes.Exception]])
       expect(params).toMatchSnapshot()
     }))
   })

@@ -4,8 +4,8 @@ exports[`ExitStatusCodes matches snapshot 1`] = `
 Object {
   "0": "Satisfied",
   "1": "Unsatisfied",
-  "2": "CaughtException",
-  "CaughtException": 2,
+  "2": "Exception",
+  "Exception": 2,
   "Satisfied": 0,
   "Unsatisfied": 1,
 }

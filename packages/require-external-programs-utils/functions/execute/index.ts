@@ -1,6 +1,6 @@
 import { ExitStatusCodes } from '../../enums'
 import { examine } from '../../functions'
-const { Satisfied, Unsatisfied, CaughtException } = ExitStatusCodes
+const { Satisfied, Unsatisfied, Exception } = ExitStatusCodes
 
 export = <Return>(
   dirname: string,
@@ -10,6 +10,6 @@ export = <Return>(
   result => {
     if (result.satisfied) return exit(Satisfied)
     log(result.response)
-    return exit(result.error ? CaughtException : Unsatisfied)
+    return exit(result.error ? Exception : Unsatisfied)
   }
 )
