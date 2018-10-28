@@ -441,6 +441,89 @@ Object {
 }
 `;
 
+exports[`require-external-programs-utils execute when all is not satisfied 1`] = `
+Object {
+  "exitParams": Array [
+    Array [
+      1,
+    ],
+  ],
+  "logParams": Array [
+    Array [
+      "
+[2m* [22m[1mabc[22m
+[2m  - [22m[2m[3mrequired by [23m[22m[3mvalid/node_modules/abc-def/package.json[23m
+[2m  - [22m[2m[3mrequired by [23m[22m[3mvalid/node_modules/abc-ghi/package.json[23m
+
+[2m* [22m[1mdef[22m
+[2m  - [22m[2m[3mrequired by [23m[22m[3mvalid/node_modules/abc-def/package.json[23m
+
+[2m* [22m[1mghi[22m
+[2m  - [22m[2m[3mrequired by [23m[22m[3mvalid/node_modules/abc-ghi/package.json[23m
+
+[2m* [22m[1mjkl[22m
+[2m  - [22m[2m[3mrequired by [23m[22m[3mvalid/node_modules/jkl/package.json[23m
+
+",
+    ],
+  ],
+}
+`;
+
+exports[`require-external-programs-utils execute when all is satisfied 1`] = `
+Object {
+  "exitParams": Array [
+    Array [
+      0,
+    ],
+  ],
+  "logParams": Array [],
+}
+`;
+
+exports[`require-external-programs-utils execute when only some is satisfied 1`] = `
+Object {
+  "exitParams": Array [
+    Array [
+      1,
+    ],
+  ],
+  "logParams": Array [
+    Array [
+      "
+[2m* [22m[1mghi[22m
+[2m  - [22m[2m[3mrequired by [23m[22m[3mvalid/node_modules/abc-ghi/package.json[23m
+
+[2m* [22m[1mjkl[22m
+[2m  - [22m[2m[3mrequired by [23m[22m[3mvalid/node_modules/jkl/package.json[23m
+
+",
+    ],
+  ],
+}
+`;
+
+exports[`require-external-programs-utils execute when some manifest files are invalid 1`] = `
+Object {
+  "exitParams": Array [
+    Array [
+      2,
+    ],
+  ],
+  "logParams": Array [
+    Array [
+      "
+[[1mInvalidManifest:[22m Detected 4 invalid items]
+  * Found \\"require-external-programs\\" in \\"peerDependencies\\", use \\"dependencies\\" instead [2m(invalid/found-dependency-in-peer/qux/package.json)[22m
+  * Found \\"requireExternalPrograms\\" but not \\"require-external-programs\\" in either \\"dependencies\\" or \\"devDependencies\\" [2m(invalid/lack-dependency-dicts/bar/package.json)[22m
+  * Found \\"requireExternalPrograms\\" but not \\"require-external-programs\\" in either \\"dependencies\\" or \\"devDependencies\\" [2m(invalid/missing-field-in-dependency-dict/foo/package.json)[22m
+  * Expecting \\"require-external-programs\\" to be an array but received \\"hello\\" [2m(invalid/not-an-array/baz/package.json)[22m
+",
+    ],
+  ],
+}
+`;
+
 exports[`require-external-programs-utils group by manifests 1`] = `
 Map {
   "foo/package.json" => Set {

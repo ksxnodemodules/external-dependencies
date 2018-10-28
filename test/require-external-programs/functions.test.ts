@@ -16,7 +16,8 @@ import utilsDefaultExport, {
   groupByProgram,
   messageFromError,
   examine,
-  execute
+  execute,
+  ExitStatusCodes
 } from 'require-external-programs-utils'
 
 import createVirtualEnvironment from './virtual-env'
@@ -140,6 +141,71 @@ describe('require-external-programs-utils', () => {
 
       expect(result).toMatchObject({ satisfied: false, error: true })
       expect(result).toMatchSnapshot()
+    }))
+  })
+
+  describe('execute', () => {
+    const mkfn = (dirname: string) => {
+      const logParams = Array<any>()
+      const exitParams = Array<ExitStatusCodes[]>()
+
+      const fn = () => execute(
+        dirname,
+        (...args) => { logParams.push(args) },
+        (...args) => { exitParams.push(args) }
+      )
+
+      const getParams = () => ({ logParams, exitParams })
+
+      return { fn, getParams }
+    }
+
+    it('when all is satisfied', apply(async () => {
+      whichMockData.mockSync(cmd => `/bin/${cmd}`)
+      const { fn, getParams } = mkfn('valid')
+      await fn()
+      const params = getParams()
+      whichMockData.restoreAll()
+
+      expect(params.exitParams).toEqual([[ExitStatusCodes.Satisfied]])
+      expect(params).toMatchSnapshot()
+    }))
+
+    it('when all is not satisfied', apply(async () => {
+      whichMockData.mockSync(() => null)
+      const { fn, getParams } = mkfn('valid')
+      await fn()
+      const params = getParams()
+      whichMockData.restoreAll()
+
+      expect(params.exitParams).toEqual([[ExitStatusCodes.Unsatisfied]])
+      expect(params).toMatchSnapshot()
+    }))
+
+    it('when only some is satisfied', apply(async () => {
+      const availables = ['abc', 'def']
+
+      whichMockData
+        .mockSync(cmd => availables.includes(cmd) ? `/bin/${cmd}` : null)
+
+      const { fn, getParams } = mkfn('valid')
+      await fn()
+      const params = getParams()
+      whichMockData.restoreAll()
+
+      expect(params.exitParams).toEqual([[ExitStatusCodes.Unsatisfied]])
+      expect(params).toMatchSnapshot()
+    }))
+
+    it('when some manifest files are invalid', apply(async () => {
+      whichMockData.mockSync(() => null)
+      const { fn, getParams } = mkfn('.')
+      await fn()
+      const params = getParams()
+      whichMockData.restoreAll()
+
+      expect(params.exitParams).toEqual([[ExitStatusCodes.CaughtException]])
+      expect(params).toMatchSnapshot()
     }))
   })
 
