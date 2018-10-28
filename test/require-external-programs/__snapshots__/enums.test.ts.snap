@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExitStatusCodes matches snapshot 1`] = `
+Object {
+  "0": "Satisfied",
+  "1": "Unsatisfied",
+  "2": "CaughtException",
+  "CaughtException": 2,
+  "Satisfied": 0,
+  "Unsatisfied": 1,
+}
+`;
