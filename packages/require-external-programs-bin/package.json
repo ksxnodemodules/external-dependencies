@@ -1,7 +1,7 @@
 {
   "name": "require-external-programs-bin",
   "description": "Executable used by require-external-programs package",
-  "version": "0.0.5",
+  "version": "0.0.6-rc",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/ksxnodemodules/external-dependencies#readme",
@@ -23,7 +23,7 @@
   ],
   "dependencies": {
     "tslib": "^1.9.3",
-    "require-external-programs-utils": "^0.0.5",
+    "require-external-programs-utils": "^0.0.6-rc",
     "@types/node": "^10.12.0"
   },
   "engines": {
