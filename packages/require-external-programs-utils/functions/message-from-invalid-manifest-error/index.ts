@@ -5,7 +5,8 @@ export = (error: InvalidManifestError): string => {
   let result = `\n[${chalk.bold(error.name + ':')} ${error.message}]\n`
 
   for (const { manifestPath, reason } of error.map.values()) {
-    result += `  * ${reason} ${chalk.dim('(' + manifestPath + ')')}\n`
+    result += `  * at ${chalk.italic(manifestPath)}\n`
+    result += `    → ${reason}\n`
   }
 
   return result

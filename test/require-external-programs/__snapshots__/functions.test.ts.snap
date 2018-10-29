@@ -434,10 +434,14 @@ Object {
   "error": true,
   "response": "
 [[1mInvalidManifest:[22m Detected 4 invalid items]
-  * Found \\"require-external-programs\\" in \\"peerDependencies\\", use \\"dependencies\\" instead [2m(invalid/found-dependency-in-peer/qux/package.json)[22m
-  * Found \\"requireExternalPrograms\\" but not \\"require-external-programs\\" in either \\"dependencies\\" or \\"devDependencies\\" [2m(invalid/lack-dependency-dicts/bar/package.json)[22m
-  * Found \\"requireExternalPrograms\\" but not \\"require-external-programs\\" in either \\"dependencies\\" or \\"devDependencies\\" [2m(invalid/missing-field-in-dependency-dict/foo/package.json)[22m
-  * Expecting \\"require-external-programs\\" to be an array but received \\"hello\\" [2m(invalid/not-an-array/baz/package.json)[22m
+  * at [3minvalid/found-dependency-in-peer/qux/package.json[23m
+    → Found \\"require-external-programs\\" in \\"peerDependencies\\", use \\"dependencies\\" instead
+  * at [3minvalid/lack-dependency-dicts/bar/package.json[23m
+    → Found \\"requireExternalPrograms\\" but not \\"require-external-programs\\" in either \\"dependencies\\" or \\"devDependencies\\"
+  * at [3minvalid/missing-field-in-dependency-dict/foo/package.json[23m
+    → Found \\"requireExternalPrograms\\" but not \\"require-external-programs\\" in either \\"dependencies\\" or \\"devDependencies\\"
+  * at [3minvalid/not-an-array/baz/package.json[23m
+    → Expecting \\"require-external-programs\\" to be an array but received \\"hello\\"
 ",
   "satisfied": false,
 }
@@ -518,10 +522,14 @@ Object {
     Array [
       "
 [[1mInvalidManifest:[22m Detected 4 invalid items]
-  * Found \\"require-external-programs\\" in \\"peerDependencies\\", use \\"dependencies\\" instead [2m(invalid/found-dependency-in-peer/qux/package.json)[22m
-  * Found \\"requireExternalPrograms\\" but not \\"require-external-programs\\" in either \\"dependencies\\" or \\"devDependencies\\" [2m(invalid/lack-dependency-dicts/bar/package.json)[22m
-  * Found \\"requireExternalPrograms\\" but not \\"require-external-programs\\" in either \\"dependencies\\" or \\"devDependencies\\" [2m(invalid/missing-field-in-dependency-dict/foo/package.json)[22m
-  * Expecting \\"require-external-programs\\" to be an array but received \\"hello\\" [2m(invalid/not-an-array/baz/package.json)[22m
+  * at [3minvalid/found-dependency-in-peer/qux/package.json[23m
+    → Found \\"require-external-programs\\" in \\"peerDependencies\\", use \\"dependencies\\" instead
+  * at [3minvalid/lack-dependency-dicts/bar/package.json[23m
+    → Found \\"requireExternalPrograms\\" but not \\"require-external-programs\\" in either \\"dependencies\\" or \\"devDependencies\\"
+  * at [3minvalid/missing-field-in-dependency-dict/foo/package.json[23m
+    → Found \\"requireExternalPrograms\\" but not \\"require-external-programs\\" in either \\"dependencies\\" or \\"devDependencies\\"
+  * at [3minvalid/not-an-array/baz/package.json[23m
+    → Expecting \\"require-external-programs\\" to be an array but received \\"hello\\"
 ",
     ],
   ],
@@ -571,9 +579,13 @@ exports[`require-external-programs-utils messageFromError when error is an insta
 exports[`require-external-programs-utils messageFromError when error is an instance of InvalidManifest 1`] = `
 "
 [[1mInvalidManifest:[22m Detected 4 invalid items]
-  * Found \\"require-external-programs\\" in \\"peerDependencies\\", use \\"dependencies\\" instead [2m(invalid/found-dependency-in-peer/qux/package.json)[22m
-  * Found \\"requireExternalPrograms\\" but not \\"require-external-programs\\" in either \\"dependencies\\" or \\"devDependencies\\" [2m(invalid/lack-dependency-dicts/bar/package.json)[22m
-  * Found \\"requireExternalPrograms\\" but not \\"require-external-programs\\" in either \\"dependencies\\" or \\"devDependencies\\" [2m(invalid/missing-field-in-dependency-dict/foo/package.json)[22m
-  * Expecting \\"require-external-programs\\" to be an array but received \\"hello\\" [2m(invalid/not-an-array/baz/package.json)[22m
+  * at [3minvalid/found-dependency-in-peer/qux/package.json[23m
+    → Found \\"require-external-programs\\" in \\"peerDependencies\\", use \\"dependencies\\" instead
+  * at [3minvalid/lack-dependency-dicts/bar/package.json[23m
+    → Found \\"requireExternalPrograms\\" but not \\"require-external-programs\\" in either \\"dependencies\\" or \\"devDependencies\\"
+  * at [3minvalid/missing-field-in-dependency-dict/foo/package.json[23m
+    → Found \\"requireExternalPrograms\\" but not \\"require-external-programs\\" in either \\"dependencies\\" or \\"devDependencies\\"
+  * at [3minvalid/not-an-array/baz/package.json[23m
+    → Expecting \\"require-external-programs\\" to be an array but received \\"hello\\"
 "
 `;
