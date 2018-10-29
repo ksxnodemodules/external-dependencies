@@ -5,7 +5,7 @@ const programPrefix = chalk.dim('* ')
 const manifestPrefix = chalk.dim('  - ') + chalk.dim.italic('required by ')
 
 export = (grouper: Grouper<string, string>): string => {
-  let result = '\n'
+  let result = `\nMissing ${grouper.size} external programs\n`
 
   for (const [program, dependants] of grouper) {
     result += programPrefix + chalk.bold(program) + '\n'

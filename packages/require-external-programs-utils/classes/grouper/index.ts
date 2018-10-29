@@ -32,6 +32,10 @@ implements Iterable<[Title, Set<Member>]> {
   public * [Symbol.iterator] () {
     yield * this.data
   }
+
+  public get size (): number {
+    return this.data.size
+  }
 }
 
 export = Grouper

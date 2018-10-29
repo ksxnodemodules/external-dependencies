@@ -307,6 +307,7 @@ exports[`require-external-programs-utils examine when all is not satisfied 1`] =
 Object {
   "error": false,
   "response": "
+Missing 4 external programs
 [2m* [22m[1mabc[22m
 [2m  - [22m[2m[3mrequired by [23m[22m[3mvalid/node_modules/abc-def/package.json[23m
 [2m  - [22m[2m[3mrequired by [23m[22m[3mvalid/node_modules/abc-ghi/package.json[23m
@@ -387,6 +388,7 @@ exports[`require-external-programs-utils examine when only some is satisfied 1`]
 Object {
   "error": false,
   "response": "
+Missing 2 external programs
 [2m* [22m[1mghi[22m
 [2m  - [22m[2m[3mrequired by [23m[22m[3mvalid/node_modules/abc-ghi/package.json[23m
 
@@ -451,6 +453,7 @@ Object {
   "logParams": Array [
     Array [
       "
+Missing 4 external programs
 [2m* [22m[1mabc[22m
 [2m  - [22m[2m[3mrequired by [23m[22m[3mvalid/node_modules/abc-def/package.json[23m
 [2m  - [22m[2m[3mrequired by [23m[22m[3mvalid/node_modules/abc-ghi/package.json[23m
@@ -491,6 +494,7 @@ Object {
   "logParams": Array [
     Array [
       "
+Missing 2 external programs
 [2m* [22m[1mghi[22m
 [2m  - [22m[2m[3mrequired by [23m[22m[3mvalid/node_modules/abc-ghi/package.json[23m
 
