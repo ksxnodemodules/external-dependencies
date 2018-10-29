@@ -1,6 +1,7 @@
 import * as xjest from 'extra-jest'
 import * as fsTreeUtils from 'fs-tree-utils'
 import { KEYWORD, KEYNAME, ManifestContent } from 'require-external-programs-lib'
+import { SATISFIES_ALL, UNSATISFIES_ALL } from '../__mocks__/semver/data'
 
 const virpkg =
   <Manifest extends Partial<ManifestContent>, Rest extends fsTreeUtils.Tree.Write.Object>
@@ -16,7 +17,7 @@ function createFactory (container?: string) {
         'abc-def': virpkg({
           name: 'abc-def',
           dependencies: {
-            [KEYWORD]: '*'
+            [KEYWORD]: SATISFIES_ALL
           },
           [KEYNAME]: [
             'abc',
@@ -27,7 +28,7 @@ function createFactory (container?: string) {
         'abc-ghi': virpkg({
           name: 'abc-ghi',
           devDependencies: {
-            [KEYWORD]: '*'
+            [KEYWORD]: SATISFIES_ALL
           },
           [KEYNAME]: [
             'abc',
@@ -38,7 +39,7 @@ function createFactory (container?: string) {
         'jkl': virpkg({
           name: 'jkl',
           dependencies: {
-            [KEYWORD]: '*'
+            [KEYWORD]: SATISFIES_ALL
           },
           [KEYNAME]: [
             'jkl'
@@ -48,14 +49,14 @@ function createFactory (container?: string) {
         'missing-activation-key': virpkg({
           name: 'missing-activation-key',
           devDependencies: {
-            [KEYWORD]: '*'
+            [KEYWORD]: SATISFIES_ALL
           }
         }),
 
         'mismatched-version': virpkg({
           name: 'mismatched-version',
           dependencies: {
-            [KEYWORD]: '> 999 < 1' // This range is meant to be impossible
+            [KEYWORD]: UNSATISFIES_ALL
           },
           [KEYNAME]: [
             'hello'
@@ -89,7 +90,7 @@ function createFactory (container?: string) {
         'baz': virpkg({
           name: 'bar',
           dependencies: {
-            [KEYWORD]: '*'
+            [KEYWORD]: SATISFIES_ALL
           },
           [KEYNAME]: 'hello' as any
         })
@@ -99,10 +100,10 @@ function createFactory (container?: string) {
         'qux': virpkg({
           name: 'qux',
           dependencies: {
-            [KEYWORD]: '*'
+            [KEYWORD]: SATISFIES_ALL
           },
           peerDependencies: {
-            [KEYWORD]: '*'
+            [KEYWORD]: SATISFIES_ALL
           }
         })
       }
