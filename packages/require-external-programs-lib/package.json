@@ -1,7 +1,7 @@
 {
   "name": "require-external-programs-lib",
   "description": "Programmatic library for require-external-programs package",
-  "version": "0.0.6-rc.0",
+  "version": "0.0.6",
   "author": "Hoàng Văn Khải <hvksmr1996@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/ksxnodemodules/external-dependencies#readme",
