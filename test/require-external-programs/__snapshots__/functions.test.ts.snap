@@ -20,7 +20,7 @@ Object {
     Object {
       "manifestContent": Object {
         "dependencies": Object {
-          "require-external-programs": "> 999 < 1",
+          "require-external-programs": "<UnsatisfiesAll>",
         },
         "name": "mismatched-version",
         "requireExternalPrograms": Array [
@@ -32,7 +32,7 @@ Object {
     Object {
       "manifestContent": Object {
         "devDependencies": Object {
-          "require-external-programs": "*",
+          "require-external-programs": "<SatisfiesAll>",
         },
         "name": "missing-activation-key",
       },
@@ -43,7 +43,7 @@ Object {
     Object {
       "manifestContent": Object {
         "dependencies": Object {
-          "require-external-programs": "*",
+          "require-external-programs": "<SatisfiesAll>",
         },
         "name": "abc-def",
         "requireExternalPrograms": Array [
@@ -56,7 +56,7 @@ Object {
     Object {
       "manifestContent": Object {
         "devDependencies": Object {
-          "require-external-programs": "*",
+          "require-external-programs": "<SatisfiesAll>",
         },
         "name": "abc-ghi",
         "requireExternalPrograms": Array [
@@ -69,7 +69,7 @@ Object {
     Object {
       "manifestContent": Object {
         "dependencies": Object {
-          "require-external-programs": "*",
+          "require-external-programs": "<SatisfiesAll>",
         },
         "name": "jkl",
         "requireExternalPrograms": Array [
@@ -83,11 +83,11 @@ Object {
     Object {
       "manifestContent": Object {
         "dependencies": Object {
-          "require-external-programs": "*",
+          "require-external-programs": "<SatisfiesAll>",
         },
         "name": "qux",
         "peerDependencies": Object {
-          "require-external-programs": "*",
+          "require-external-programs": "<SatisfiesAll>",
         },
       },
       "manifestPath": "invalid/found-dependency-in-peer/qux/package.json",
@@ -118,7 +118,7 @@ Object {
     Object {
       "manifestContent": Object {
         "dependencies": Object {
-          "require-external-programs": "*",
+          "require-external-programs": "<SatisfiesAll>",
         },
         "name": "bar",
         "requireExternalPrograms": "hello",
@@ -137,11 +137,11 @@ Object {
     "invalid/found-dependency-in-peer/qux/package.json" => Object {
       "manifestContent": Object {
         "dependencies": Object {
-          "require-external-programs": "*",
+          "require-external-programs": "<SatisfiesAll>",
         },
         "name": "qux",
         "peerDependencies": Object {
-          "require-external-programs": "*",
+          "require-external-programs": "<SatisfiesAll>",
         },
       },
       "manifestPath": "invalid/found-dependency-in-peer/qux/package.json",
@@ -172,7 +172,7 @@ Object {
     "invalid/not-an-array/baz/package.json" => Object {
       "manifestContent": Object {
         "dependencies": Object {
-          "require-external-programs": "*",
+          "require-external-programs": "<SatisfiesAll>",
         },
         "name": "bar",
         "requireExternalPrograms": "hello",
@@ -191,11 +191,11 @@ Object {
     "invalid/found-dependency-in-peer/qux/package.json" => Object {
       "manifestContent": Object {
         "dependencies": Object {
-          "require-external-programs": "*",
+          "require-external-programs": "<SatisfiesAll>",
         },
         "name": "qux",
         "peerDependencies": Object {
-          "require-external-programs": "*",
+          "require-external-programs": "<SatisfiesAll>",
         },
       },
       "manifestPath": "invalid/found-dependency-in-peer/qux/package.json",
@@ -226,7 +226,7 @@ Object {
     "invalid/not-an-array/baz/package.json" => Object {
       "manifestContent": Object {
         "dependencies": Object {
-          "require-external-programs": "*",
+          "require-external-programs": "<SatisfiesAll>",
         },
         "name": "bar",
         "requireExternalPrograms": "hello",
@@ -283,7 +283,7 @@ Object {
     "invalid/not-an-array/baz/package.json" => Object {
       "manifestContent": Object {
         "dependencies": Object {
-          "require-external-programs": "*",
+          "require-external-programs": "<SatisfiesAll>",
         },
         "name": "bar",
         "requireExternalPrograms": "hello",
