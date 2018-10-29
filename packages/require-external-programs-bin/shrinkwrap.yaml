@@ -16,5 +16,5 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   '@types/node': ^10.12.0
-  require-external-programs-utils: ^0.0.6-rc.0
+  require-external-programs-utils: ^0.0.6
   tslib: ^1.9.3
