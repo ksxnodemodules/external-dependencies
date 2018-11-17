@@ -1,5 +1,5 @@
 dependencies:
-  '@types/node': 10.12.0
+  '@types/node': 10.12.5
   '@types/which': 1.3.1
   advanced-map-initialized: 0.0.2
   chalk: 2.4.1
@@ -7,17 +7,17 @@ dependencies:
   require-external-programs-lib: 'link:../require-external-programs-lib'
   tslib: 1.9.3
 packages:
-  /@types/node/10.12.0:
+  /@types/node/10.12.5:
     dev: false
     resolution:
-      integrity: sha512-3TUHC3jsBAB7qVRGxT6lWyYo2v96BMmD2PTcl47H25Lu7UXtFH/2qqmKiVrnel6Ne//0TFYf6uvNX+HW2FRkLQ==
+      integrity: sha512-GzdHjq3t3eGLMv92Al90Iq+EoLL+86mPfQhuglbBFO7HiLdC/rkt+zrzJJumAiBF6nsrBWhou22rPW663AAyFw==
   /@types/which/1.3.1:
     dev: false
     resolution:
       integrity: sha512-ZrJDWpvg75LTGX4XwuneY9s6bF3OeZcGTpoGh3zDV9ytzcHMFsRrMIaLBRJZQMBoGyKs6unBQfVdrLZiYfb1zQ==
   /advanced-map-base/0.0.2:
     dependencies:
-      '@types/node': 10.12.0
+      '@types/node': 10.12.5
       advanced-map-types: 0.0.2
       tslib: 1.9.3
       typescript-miscellaneous: 0.1.0
@@ -29,7 +29,7 @@ packages:
       integrity: sha512-fj4I4dNaEnVl9bSKsMXtgyVo4+kgV04ScFyLjyIfdNWp1FnRsCzWHtZDGblgq/Nau/2EMegOqW+PDN9qKmGDIA==
   /advanced-map-initialized/0.0.2:
     dependencies:
-      '@types/node': 10.12.0
+      '@types/node': 10.12.5
       advanced-map-base: 0.0.2
       advanced-map-types: 0.0.2
       tslib: 1.9.3
@@ -40,7 +40,7 @@ packages:
       integrity: sha512-L6/yZylpOElrSpsZTPiMvpCsgnybX8JxYZX88EO2h+yNHYoqwRCojjNOifKSuoIFiWUb5mPFA0tlW7oTM8iOiQ==
   /advanced-map-types/0.0.2:
     dependencies:
-      '@types/node': 10.12.0
+      '@types/node': 10.12.5
       tslib: 1.9.3
       typescript-miscellaneous: 0.1.0
     deprecated: Depends on wrong version of "convenient-typescript-utilities"
@@ -103,7 +103,7 @@ packages:
       integrity: sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
   /typescript-miscellaneous/0.1.0:
     dependencies:
-      '@types/node': 10.12.0
+      '@types/node': 10.12.5
       tslib: 1.9.3
     dev: false
     engines:

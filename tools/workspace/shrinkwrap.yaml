@@ -4,15 +4,15 @@ dependencies:
   nested-workspace-helper: 0.2.8
   number-enum: 3.0.0
 packages:
-  /@babel/runtime/7.1.2:
+  /@babel/runtime/7.1.5:
     dependencies:
       regenerator-runtime: 0.12.1
     dev: false
     resolution:
-      integrity: sha512-Y3SCjmhSupzFB6wcv1KmmFucH6gDVnI30WjOcicV10ju0cZjak3Jcs67YLIXBrmZYw1xCrVeJPbycFwrqNyxpg==
+      integrity: sha512-xKnPpXG/pvK1B90JkwwxSGii90rQGKtzcMt2gI5G6+M0REXaq6rOHsGC2ay6/d0Uje7zzvSzjEzfR3ENhFlrfA==
   /@types/fs-extra/5.0.4:
     dependencies:
-      '@types/node': 10.12.1
+      '@types/node': 10.12.5
     dev: false
     resolution:
       integrity: sha512-DsknoBvD8s+RFfSGjmERJ7ZOP1HI0UZRA3FSI+Zakhrc/Gy26YQsLI+m5V5DHxroHRJqCDLKJp7Hixn8zyaF7g==
@@ -22,18 +22,18 @@ packages:
       integrity: sha512-JRDtMPEqXrzfuYAdqbxLot1GvAr/QvicIZAnOAigZaj8xVMhuSJTg/xsv9E1TvyL+wujYhRLx9ZsQ0oFOSmwyA==
   /@types/node-fetch/2.1.2:
     dependencies:
-      '@types/node': 10.12.1
+      '@types/node': 10.12.5
     dev: false
     resolution:
       integrity: sha512-XroxUzLpKuL+CVkQqXlffRkEPi4Gh3Oui/mWyS7ztKiyqVxiU+h3imCW5I2NQmde5jK+3q++36/Q96cyRWsweg==
-  /@types/node/10.12.1:
+  /@types/node/10.12.5:
     dev: false
     resolution:
-      integrity: sha512-i1sl+WCX2OCHeUi9oi7PiCNUtYFrpWhpcx878vpeq/tlZTKzcFdHePlyFHVbWqeuKN0SRPl/9ZFDSTsfv9h7VQ==
-  /@types/ramda/0.25.40:
+      integrity: sha512-GzdHjq3t3eGLMv92Al90Iq+EoLL+86mPfQhuglbBFO7HiLdC/rkt+zrzJJumAiBF6nsrBWhou22rPW663AAyFw==
+  /@types/ramda/0.25.41:
     dev: false
     resolution:
-      integrity: sha512-2wJUkK/jY//CECZZrFb1LBreCkwuA9RY4P1GpGV35vLg/cJQUFs0dSUEvQANPjnoa4Kv8hsVFvM0v8xS5cPydg==
+      integrity: sha512-R6IkySFkrCN6Xd3exKX1PI2hvkmpbDZBKYz7u4uuYas8NeUCmcHkccYo6OWKtWIkYipjGBQP2ZzlTT+R3bUY6Q==
   /@types/semver/5.5.0:
     dev: false
     resolution:
@@ -92,14 +92,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-4FG+RSG9DL7uEwRUZXZn3SS34DiDPfzP0VOiEwtUWlE+AR2EIg+hSyvrIgUUfhdgR/UkAeW2QHgeP+hWrXs7jQ==
-  /clone-regexp/2.1.0:
-    dependencies:
-      is-regexp: 2.0.0
-    dev: false
-    engines:
-      node: '>=6'
-    resolution:
-      integrity: sha512-Ujn//SX3jg4duyQGM37swl+Sk95zmQnraZO0fGVZQEq1fJJML8mJaEkbT70ns/kBcdU7HLzpF8VJUmsb1lDD8Q==
   /code-point-at/1.1.0:
     dev: false
     engines:
@@ -155,7 +147,7 @@ packages:
       integrity: sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==
   /exec-inline/0.0.2:
     dependencies:
-      '@types/node': 10.12.1
+      '@types/node': 10.12.5
       tslib: 1.9.3
     dev: false
     engines:
@@ -184,22 +176,22 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-1yD6RmLI1XBfxugvORwlck6f75tYL+iR0jqwsOrOxMZyGYqUuDhJ0l4AXdO1iX/FTs9cBAMEk1gWSEx1kSbylg==
-  /fs-extra/7.0.0:
+  /fs-extra/7.0.1:
     dependencies:
-      graceful-fs: 4.1.11
+      graceful-fs: 4.1.15
       jsonfile: 4.0.0
       universalify: 0.1.2
     dev: false
     engines:
       node: '>=6 <7 || >=8'
     resolution:
-      integrity: sha512-EglNDLRpmaTWiD/qraZn6HREAEAHJcJOmxNEYwq6xeMKnVMAy3GUcFB+wXt2C6k4CNvB/mP1y/U3dzvKKj5OtQ==
+      integrity: sha512-YJDaCJZEnBmcbw13fvdAM9AwNOJwOzrE4pqMqBq5nFiEqXUqHwlK4B+3pUw6JNvfSPtX05xFHtYy/1ni01eGCw==
   /fs-tree-utils/0.1.6:
     dependencies:
       '@types/fs-extra': 5.0.4
-      '@types/node': 10.12.1
-      '@types/ramda': 0.25.40
-      fs-extra: 7.0.0
+      '@types/node': 10.12.5
+      '@types/ramda': 0.25.41
+      fs-extra: 7.0.1
       monorepo-shared-assets: 0.0.17
       ramda: 0.25.0
       tslib: 1.9.3
@@ -218,12 +210,10 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-jpQ9E1jcN1VQVOy+LtsFqhdO3hQ=
-  /graceful-fs/4.1.11:
+  /graceful-fs/4.1.15:
     dev: false
-    engines:
-      node: '>=0.4.0'
     resolution:
-      integrity: sha1-Dovf5NHduIVNZOBOp8AOKgJuVlg=
+      integrity: sha512-6uHUhOPEBgQ24HM+r6b/QwWfZq+yiFcipKFrOFiBEnWdy5sdzYoi+pJeQaPI5qOLRFqWmAXUPQNsielzdLoecA==
   /has-flag/3.0.0:
     dev: false
     engines:
@@ -256,12 +246,6 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-o7MKXE8ZkYMWeqq5O+764937ZU8=
-  /is-regexp/2.0.0:
-    dev: false
-    engines:
-      node: '>=6'
-    resolution:
-      integrity: sha512-B5NGyyvXTmppdR/g7ei6cu5DXhvzBLNcajOXJ3OR1tmW39iiF7444beL1lQjL393j8vDOTWGnSV2r/5cKuNqkg==
   /is-stream/1.1.0:
     dev: false
     engines:
@@ -272,17 +256,16 @@ packages:
     dev: false
     resolution:
       integrity: sha1-6PvzdNxVb/iUehDcsFctYz8s+hA=
-  /iter-tools/6.1.4:
+  /iter-tools/6.1.6:
     dependencies:
-      '@babel/runtime': 7.1.2
-      clone-regexp: 2.1.0
+      '@babel/runtime': 7.1.5
       dequeue: 1.0.5
       little-ds-toolkit: 1.1.0
       typescript-tuple: 1.7.3
       typescript-union: 0.0.0
     dev: false
     resolution:
-      integrity: sha512-MpUCYuPa7w8CzoHFWRycVsWBookzztSYjFaeYWHBUmumtuNWKtAbhUnAS+9tEku9GA961a8xa7CeH5Vm0+pQ5g==
+      integrity: sha512-dCJ5FTc9xv10Cs84sd7oYt0mHbjcQQTKI+5K2E60qDVH5Jn7gtWhtRkeDeflIwRUC7W1sa+Jca/Vs5YT0B9DZw==
   /js-yaml/3.12.0:
     dependencies:
       argparse: 1.0.10
@@ -294,7 +277,7 @@ packages:
   /jsonfile/4.0.0:
     dev: false
     optionalDependencies:
-      graceful-fs: 4.1.11
+      graceful-fs: 4.1.15
     resolution:
       integrity: sha1-h3Gq4HmbZAdrdmQPygWPnBDjPss=
   /lcid/2.0.0:
@@ -344,8 +327,8 @@ packages:
       integrity: sha512-jf84uxzwiuiIVKiOLpfYk7N46TSy8ubTonmneY9vrpHNAnp0QBt2BxWV9dO3/j+BoVAb+a5G6YDPW3M5HOdMWQ==
   /monorepo-shared-assets/0.0.17:
     dependencies:
-      '@types/node': 10.12.1
-      '@types/ramda': 0.25.40
+      '@types/node': 10.12.5
+      '@types/ramda': 0.25.41
       immutable: 3.8.2
       ramda: 0.25.0
       tslib: 1.9.3
@@ -358,17 +341,17 @@ packages:
     dependencies:
       '@types/fs-extra': 5.0.4
       '@types/js-yaml': 3.11.2
-      '@types/node': 10.12.1
+      '@types/node': 10.12.5
       '@types/node-fetch': 2.1.2
-      '@types/ramda': 0.25.40
+      '@types/ramda': 0.25.41
       '@types/semver': 5.5.0
       '@types/yargs': 12.0.1
       chalk: 2.4.1
-      fs-extra: 7.0.0
+      fs-extra: 7.0.1
       fs-tree-utils: 0.1.6
       js-yaml: 3.12.0
       monorepo-shared-assets: 0.0.17
-      node-fetch: 2.2.0
+      node-fetch: 2.2.1
       ramda: 0.25.0
       semver: 5.6.0
       smart-publish: 0.0.2
@@ -384,12 +367,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
-  /node-fetch/2.2.0:
+  /node-fetch/2.2.1:
     dev: false
     engines:
       node: 4.x || >=6.0.0
     resolution:
-      integrity: sha512-OayFWziIxiHY8bCUyLX6sTpDH8Jsbp4FfYd1j1f7vZyfgkcOnAyM4oQR16f8a0s7Gl/viMGRey8eScYk4V4EZA==
+      integrity: sha512-ObXBpNCD3A/vYQiQtEWl7DuqjAXjfptYFuGHLdPl5U19/6kJuZV+8uMHLrkj3wJrJoyfg4nhgyFixZdaZoAiEQ==
   /npm-run-path/2.0.2:
     dependencies:
       path-key: 2.0.1
@@ -400,7 +383,7 @@ packages:
       integrity: sha1-NakjLfo11wZ7TLLd8jV7GHFTbF8=
   /number-enum/3.0.0:
     dependencies:
-      iter-tools: 6.1.4
+      iter-tools: 6.1.6
     dev: false
     engines:
       node: '>= 8.9.0'
@@ -521,7 +504,7 @@ packages:
       integrity: sha1-tf3AjxKH6hF4Yo5BXiUTK3NkbG0=
   /smart-publish/0.0.2:
     dependencies:
-      '@types/node': 10.12.1
+      '@types/node': 10.12.5
       '@types/semver': 5.5.0
       chalk: 2.4.1
       exec-inline: 0.0.2

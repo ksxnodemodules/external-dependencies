@@ -1,22 +1,22 @@
 dependencies:
-  '@types/node': 10.12.3
+  '@types/node': 10.12.5
   '@types/which': 1.3.1
   cached-expression: 0.0.3
   require-external-programs-lib: 'link:../require-external-programs-lib'
   tslib: 1.9.3
   which: 1.3.1
 packages:
-  /@types/node/10.12.3:
+  /@types/node/10.12.5:
     dev: false
     resolution:
-      integrity: sha512-sfGmOtSMSbQ/AKG8V9xD1gmjquC9awIIZ/Kj309pHb2n3bcRAcGMQv5nJ6gCXZVsneGE4+ve8DXKRCsrg3TFzg==
+      integrity: sha512-GzdHjq3t3eGLMv92Al90Iq+EoLL+86mPfQhuglbBFO7HiLdC/rkt+zrzJJumAiBF6nsrBWhou22rPW663AAyFw==
   /@types/which/1.3.1:
     dev: false
     resolution:
       integrity: sha512-ZrJDWpvg75LTGX4XwuneY9s6bF3OeZcGTpoGh3zDV9ytzcHMFsRrMIaLBRJZQMBoGyKs6unBQfVdrLZiYfb1zQ==
   /cached-expression/0.0.3:
     dependencies:
-      '@types/node': 10.12.3
+      '@types/node': 10.12.5
       tslib: 1.9.3
     dev: false
     engines:

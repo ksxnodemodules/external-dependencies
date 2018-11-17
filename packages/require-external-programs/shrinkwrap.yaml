@@ -1,14 +1,13 @@
 dependencies:
-  '@types/node': 10.12.0
+  '@types/node': 10.12.5
   just-try: 2.1.0
   require-external-programs-bin: 'link:../require-external-programs-bin'
-  require-external-programs-utils: 'link:../require-external-programs-utils'
   tslib: 1.9.3
 packages:
-  /@types/node/10.12.0:
+  /@types/node/10.12.5:
     dev: false
     resolution:
-      integrity: sha512-3TUHC3jsBAB7qVRGxT6lWyYo2v96BMmD2PTcl47H25Lu7UXtFH/2qqmKiVrnel6Ne//0TFYf6uvNX+HW2FRkLQ==
+      integrity: sha512-GzdHjq3t3eGLMv92Al90Iq+EoLL+86mPfQhuglbBFO7HiLdC/rkt+zrzJJumAiBF6nsrBWhou22rPW663AAyFw==
   /just-try/2.1.0:
     dev: false
     engines:
