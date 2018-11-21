@@ -1,8 +1,8 @@
 dependencies:
   '@types/fs-extra': 5.0.4
-  '@types/node': 10.12.5
+  '@types/node': 10.12.9
   '@types/semver': 5.5.0
-  advanced-set-mutable-multi-key: 0.0.1
+  advanced-set-mutable-multi-key: 0.0.2
   fs-extra: 7.0.1
   glob: 7.1.3
   glob-promise: 3.4.0
@@ -21,7 +21,7 @@ packages:
       integrity: sha512-KEIlhXnIutzKwRbQkGWb/I4HFqBuUykAdHgDED6xqwXJfONCjF5VoE0cXEiurh3XauygxzeDzgtXUqvLkxFzzA==
   /@types/fs-extra/5.0.4:
     dependencies:
-      '@types/node': 10.12.5
+      '@types/node': 10.12.9
     dev: false
     resolution:
       integrity: sha512-DsknoBvD8s+RFfSGjmERJ7ZOP1HI0UZRA3FSI+Zakhrc/Gy26YQsLI+m5V5DHxroHRJqCDLKJp7Hixn8zyaF7g==
@@ -29,7 +29,7 @@ packages:
     dependencies:
       '@types/events': 1.2.0
       '@types/minimatch': 3.0.3
-      '@types/node': 10.12.5
+      '@types/node': 10.12.9
     dev: false
     resolution:
       integrity: sha512-1Bh06cbWJUHMC97acuD6UMG29nMt0Aqz1vF3guLfG+kHHJhy3AyohZFFxYk2f7Q1SQIrNwvncxAE0N/9s70F2w==
@@ -37,17 +37,17 @@ packages:
     dev: false
     resolution:
       integrity: sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
-  /@types/node/10.12.5:
+  /@types/node/10.12.9:
     dev: false
     resolution:
-      integrity: sha512-GzdHjq3t3eGLMv92Al90Iq+EoLL+86mPfQhuglbBFO7HiLdC/rkt+zrzJJumAiBF6nsrBWhou22rPW663AAyFw==
+      integrity: sha512-eajkMXG812/w3w4a1OcBlaTwsFPO5F7fJ/amy+tieQxEMWBlbV1JGSjkFM+zkHNf81Cad+dfIRA+IBkvmvdAeA==
   /@types/semver/5.5.0:
     dev: false
     resolution:
       integrity: sha512-41qEJgBH/TWgo5NFSvBCJ1qkoi3Q6ONSF2avrHq1LVEZfYpdHmj0y9SuTK+u9ZhG1sYQKBL1AWXKyLWP4RaUoQ==
   /advanced-set-altered-equal/0.0.1:
     dependencies:
-      '@types/node': 10.12.5
+      '@types/node': 10.12.9
       advanced-set-base: 0.0.0
       advanced-set-types: 0.0.0
       convenient-typescript-utilities: 0.0.3
@@ -59,7 +59,7 @@ packages:
       integrity: sha512-WvpNv4/zsZc6MYXPlpY0xGnjXXmWFWOUvc43eFfqKgSBWL6n5QLbkyneyjRdF6sBjDKXe2Yla4u1VsRt8IEdEQ==
   /advanced-set-base/0.0.0:
     dependencies:
-      '@types/node': 10.12.5
+      '@types/node': 10.12.9
       advanced-set-types: 0.0.0
       tslib: 1.9.3
       typescript-miscellaneous: 0.1.0
@@ -69,32 +69,32 @@ packages:
       node: '>= 8.9.0'
     resolution:
       integrity: sha512-RP3zt5zRkNTAWCW/0u1A3jmOp6xel8qFt0U9YYbuhNRGIkjGhHOb9lzchbND6yutVohaH32Voz0ojbOVIzkZLg==
-  /advanced-set-multi-key-base/0.0.1:
+  /advanced-set-multi-key-base/0.0.2:
     dependencies:
-      '@types/node': 10.12.5
+      '@types/node': 10.12.9
       advanced-set-altered-equal: 0.0.1
       advanced-set-types: 0.0.0
-      create-array-equal: 0.0.0
+      create-array-equal: 0.0.1
       tslib: 1.9.3
     dev: false
     engines:
       node: '>= 8.9.0'
     resolution:
-      integrity: sha512-kCZJkQZzpCbdmn830Bv6OX1MA9FlAuo3zJB0X6gdyPMqKSiA+lLk1JuBBEBjjT+XJdM1ISGMoUg70s16xOZTPg==
-  /advanced-set-mutable-multi-key/0.0.1:
+      integrity: sha512-HFLsniK99rMC4eCyzOalsghuSE4nfUl4DyFfun9sfHlmSY3QHXuaRfNL7UVaHeUCcPLGrzgE3vCVsIrX4WJtiw==
+  /advanced-set-mutable-multi-key/0.0.2:
     dependencies:
-      '@types/node': 10.12.5
-      advanced-set-multi-key-base: 0.0.1
+      '@types/node': 10.12.9
+      advanced-set-multi-key-base: 0.0.2
       advanced-set-types: 0.0.0
       tslib: 1.9.3
     dev: false
     engines:
       node: '>= 8.9.0'
     resolution:
-      integrity: sha512-+9XfZs67S9r5Xh3wXNYDWZaspBHmKL1YA+NOhSsQSteRMrs6d8prPto0DB2bvXExkvlbiBG9Wo6pXwhQgVe2RA==
+      integrity: sha512-eNTZUb7JjV57fuwnjAP7F4OX9btunZ1dhmbpy19Vk2kamrDz1kxNihiTZOaY0YkgCcc7s/z6G0gHauqdNPeZ1w==
   /advanced-set-types/0.0.0:
     dependencies:
-      '@types/node': 10.12.5
+      '@types/node': 10.12.9
       tslib: 1.9.3
       typescript-miscellaneous: 0.1.0
     deprecated: Depends on wrong version of "convenient-typescript-utilities"
@@ -120,16 +120,16 @@ packages:
       integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
   /convenient-typescript-utilities/0.0.3:
     dependencies:
-      '@types/node': 10.12.5
+      '@types/node': 10.12.9
       tslib: 1.9.3
     dev: false
     engines:
       node: '>= 8.9.0'
     resolution:
       integrity: sha512-kHjMz9faySaKMx9ZRwv9oTogYRXCGaKPYq+xsLEswBo+0a5r8l5Xk/7Q+vqDLMYMrTm2oW7wEgtiDcXonr8Nkg==
-  /create-array-equal/0.0.0:
+  /create-array-equal/0.0.1:
     dependencies:
-      '@types/node': 10.12.5
+      '@types/node': 10.12.9
       iter-tools: 6.1.6
       tslib: 1.9.3
       typescript-miscellaneous: 0.1.0
@@ -137,7 +137,7 @@ packages:
     engines:
       node: '>= 8.9.0'
     resolution:
-      integrity: sha512-PKGYy366uoR4/A1RqKgVmyZfxf7M7Ilp9L7zHx7OubCylYp4G2WcS3gnLwrfSKIUfbV8jOOYqY1YbNOhVGhR9g==
+      integrity: sha512-QCpEgP2tYOfEK41zZzltXNWaB6HJYhZVVBEFc5o6+6FyHf4AUEVb0mBXJPYGNAPN/nT+TFFW4+ar8R3TQ1XxXg==
   /dequeue/1.0.5:
     dev: false
     resolution:
@@ -245,7 +245,7 @@ packages:
       integrity: sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
   /typescript-miscellaneous/0.1.0:
     dependencies:
-      '@types/node': 10.12.5
+      '@types/node': 10.12.9
       tslib: 1.9.3
     dev: false
     engines:
@@ -291,7 +291,7 @@ specifiers:
   '@types/fs-extra': ^5.0.4
   '@types/node': ^10.12.0
   '@types/semver': ^5.5.0
-  advanced-set-mutable-multi-key: ^0.0.1
+  advanced-set-mutable-multi-key: ^0.0.2
   fs-extra: ^7.0.0
   glob: ^7.1.3
   glob-promise: ^3.4.0
