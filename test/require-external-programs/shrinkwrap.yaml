@@ -16,22 +16,22 @@ dependencies:
 packages:
   /@types/fs-extra/5.0.4:
     dependencies:
-      '@types/node': 10.12.5
+      '@types/node': 10.12.18
     dev: false
     resolution:
       integrity: sha512-DsknoBvD8s+RFfSGjmERJ7ZOP1HI0UZRA3FSI+Zakhrc/Gy26YQsLI+m5V5DHxroHRJqCDLKJp7Hixn8zyaF7g==
-  /@types/js-yaml/3.11.2:
+  /@types/js-yaml/3.11.4:
     dev: false
     resolution:
-      integrity: sha512-JRDtMPEqXrzfuYAdqbxLot1GvAr/QvicIZAnOAigZaj8xVMhuSJTg/xsv9E1TvyL+wujYhRLx9ZsQ0oFOSmwyA==
-  /@types/node/10.12.5:
+      integrity: sha512-a42nbZzOlxbH3ORDg/brU+zlRQS8mSvZCEY4Xery66/NIA7yX4T9qk6yL9qpw4AhgwzEgc1XIhHRnivQW+zlkw==
+  /@types/node/10.12.18:
     dev: false
     resolution:
-      integrity: sha512-GzdHjq3t3eGLMv92Al90Iq+EoLL+86mPfQhuglbBFO7HiLdC/rkt+zrzJJumAiBF6nsrBWhou22rPW663AAyFw==
-  /@types/ramda/0.25.41:
+      integrity: sha512-fh+pAqt4xRzPfqA6eh3Z2y6fyZavRIumvjhaCL753+TVkGKGhpPeyrJG2JftD0T9q4GF00KjefsQ+PQNDdWQaQ==
+  /@types/ramda/0.25.45:
     dev: false
     resolution:
-      integrity: sha512-R6IkySFkrCN6Xd3exKX1PI2hvkmpbDZBKYz7u4uuYas8NeUCmcHkccYo6OWKtWIkYipjGBQP2ZzlTT+R3bUY6Q==
+      integrity: sha512-J+xlbNyag7wgYRSuvRwu9zZY7t0vM4KMUVHxWLUMegqlz9+97v6jYo2JlvfsVC3qtulx7PKenFKzWCWsdVSCDw==
   /@types/semver/5.5.0:
     dev: false
     resolution:
@@ -99,9 +99,9 @@ packages:
   /extra-jest/0.0.24:
     dependencies:
       '@types/fs-extra': 5.0.4
-      '@types/js-yaml': 3.11.2
-      '@types/node': 10.12.5
-      '@types/ramda': 0.25.41
+      '@types/js-yaml': 3.11.4
+      '@types/node': 10.12.18
+      '@types/ramda': 0.25.45
       fs-extra: 7.0.1
       fs-tree-utils: 0.1.6
       js-yaml: 3.12.0
@@ -128,8 +128,8 @@ packages:
   /fs-tree-utils/0.1.6:
     dependencies:
       '@types/fs-extra': 5.0.4
-      '@types/node': 10.12.5
-      '@types/ramda': 0.25.41
+      '@types/node': 10.12.18
+      '@types/ramda': 0.25.45
       fs-extra: 7.0.1
       monorepo-shared-assets: 0.0.17
       ramda: 0.25.0
@@ -198,8 +198,8 @@ packages:
       integrity: sha1-miyr0bno4K6ZOkv31YdcOcQujqw=
   /monorepo-shared-assets/0.0.17:
     dependencies:
-      '@types/node': 10.12.5
-      '@types/ramda': 0.25.41
+      '@types/node': 10.12.18
+      '@types/ramda': 0.25.45
       immutable: 3.8.2
       ramda: 0.25.0
       tslib: 1.9.3
@@ -279,7 +279,7 @@ packages:
       integrity: sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
   /unique-temp-path/0.1.1:
     dependencies:
-      '@types/node': 10.12.5
+      '@types/node': 10.12.18
       tslib: 1.9.3
     dev: false
     engines:

@@ -5,22 +5,22 @@ dependencies:
 packages:
   /@types/fs-extra/5.0.4:
     dependencies:
-      '@types/node': 10.12.5
+      '@types/node': 10.12.18
     dev: false
     resolution:
       integrity: sha512-DsknoBvD8s+RFfSGjmERJ7ZOP1HI0UZRA3FSI+Zakhrc/Gy26YQsLI+m5V5DHxroHRJqCDLKJp7Hixn8zyaF7g==
-  /@types/node/10.12.5:
+  /@types/node/10.12.18:
     dev: false
     resolution:
-      integrity: sha512-GzdHjq3t3eGLMv92Al90Iq+EoLL+86mPfQhuglbBFO7HiLdC/rkt+zrzJJumAiBF6nsrBWhou22rPW663AAyFw==
-  /@types/ramda/0.25.41:
+      integrity: sha512-fh+pAqt4xRzPfqA6eh3Z2y6fyZavRIumvjhaCL753+TVkGKGhpPeyrJG2JftD0T9q4GF00KjefsQ+PQNDdWQaQ==
+  /@types/ramda/0.25.45:
     dev: false
     resolution:
-      integrity: sha512-R6IkySFkrCN6Xd3exKX1PI2hvkmpbDZBKYz7u4uuYas8NeUCmcHkccYo6OWKtWIkYipjGBQP2ZzlTT+R3bUY6Q==
-  /@types/yargs/12.0.1:
+      integrity: sha512-J+xlbNyag7wgYRSuvRwu9zZY7t0vM4KMUVHxWLUMegqlz9+97v6jYo2JlvfsVC3qtulx7PKenFKzWCWsdVSCDw==
+  /@types/yargs/12.0.4:
     dev: false
     resolution:
-      integrity: sha512-UVjo2oH79aRNcsDlFlnQ/iJ67Jd7j6uSg7jUJP/RZ/nUjAh5ElmnwlD5K/6eGgETJUgCHkiWn91B8JjXQ6ubAw==
+      integrity: sha512-hBYcOaYPnlAPj2OZbivFFzsW61mN0L3N0Aq4KwRt/ZXlw1c25Srj8413MBu5IhFGOyOdjLi2/qOqtStDTXGs9g==
   /ansi-regex/2.1.1:
     dev: false
     engines:
@@ -33,23 +33,23 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-7QMXwyIGT3lGbAKWa922Bas32Zg=
-  /camelcase/4.1.0:
+  /camelcase/5.0.0:
     dev: false
     engines:
-      node: '>=4'
+      node: '>=6'
     resolution:
-      integrity: sha1-1UVjW+HjPFQmScaRc+Xeas+uNN0=
+      integrity: sha512-faqwZqnWxbxn+F1d399ygeamQNy3lPp/H9H6rNrqYh4FSVCtcY+3cub1MxA8o9mDd55mM8Aghuu/kuyYA6VTsA==
   /clean-typescript-build/0.0.7:
     dependencies:
       '@types/fs-extra': 5.0.4
-      '@types/node': 10.12.5
-      '@types/ramda': 0.25.41
-      '@types/yargs': 12.0.1
+      '@types/node': 10.12.18
+      '@types/ramda': 0.25.45
+      '@types/yargs': 12.0.4
       fs-extra: 7.0.1
       fs-tree-utils: 0.1.6
       ramda: 0.25.0
       tslib: 1.9.3
-      yargs: 12.0.2
+      yargs: 12.0.5
     dev: false
     engines:
       node: ^8.9.0
@@ -82,27 +82,31 @@ packages:
       node: '>=4.8'
     resolution:
       integrity: sha512-eTVLrBSt7fjbDygz805pMnstIs2VTBNkRm0qxZd+M7A5XDdxVRWO5MxGBXZhjY4cqLYLdtrGqRf8mBPmzwSpWQ==
-  /decamelize/2.0.0:
-    dependencies:
-      xregexp: 4.0.0
+  /decamelize/1.2.0:
     dev: false
     engines:
-      node: '>=4'
+      node: '>=0.10.0'
     resolution:
-      integrity: sha512-Ikpp5scV3MSYxY39ymh45ZLEecsTdv/Xj2CaQfI8RLMuwi7XvjX9H/fhraiSuU+C5w5NTDu4ZU72xNiZnurBPg==
+      integrity: sha1-9lNNFRSCabIDUue+4m9QH5oZEpA=
+  /end-of-stream/1.4.1:
+    dependencies:
+      once: 1.4.0
+    dev: false
+    resolution:
+      integrity: sha512-1MkrZNvWTKCaigbn+W15elq2BB/L22nqrSY5DKlo3X6+vclJm8Bb5djXJBmEX6fS3+zCh/F4VBK5Z2KxJt4s2Q==
   /exec-inline/0.0.2:
     dependencies:
-      '@types/node': 10.12.5
+      '@types/node': 10.12.18
       tslib: 1.9.3
     dev: false
     engines:
       node: '>= 8.9.0'
     resolution:
       integrity: sha512-Y37NLc/InNSvORukAagfNmkXiqwgqixZDJFQ6xm0H2wruImOte9g3151nmjWS+WpzdSyFpDUoAZxpqNVZTKoUQ==
-  /execa/0.10.0:
+  /execa/1.0.0:
     dependencies:
       cross-spawn: 6.0.5
-      get-stream: 3.0.0
+      get-stream: 4.1.0
       is-stream: 1.1.0
       npm-run-path: 2.0.2
       p-finally: 1.0.0
@@ -110,9 +114,9 @@ packages:
       strip-eof: 1.0.0
     dev: false
     engines:
-      node: '>=4'
+      node: '>=6'
     resolution:
-      integrity: sha512-7XOMnz8Ynx1gGo/3hyV9loYNPWM94jG3+3T3Y8tsfSstFmETmENCMU/A/zj8Lyaj1lkgEepKepvd6240tBRvlw==
+      integrity: sha512-adbxcyWV46qiHyvSp50TKt05tB4tK3HcmF7/nxfAdhnox83seTDbwnaqKO4sXRy7roHAIFqJP/Rw/AuEbX61LA==
   /find-up/3.0.0:
     dependencies:
       locate-path: 3.0.0
@@ -134,8 +138,8 @@ packages:
   /fs-tree-utils/0.1.6:
     dependencies:
       '@types/fs-extra': 5.0.4
-      '@types/node': 10.12.5
-      '@types/ramda': 0.25.41
+      '@types/node': 10.12.18
+      '@types/ramda': 0.25.45
       fs-extra: 7.0.1
       monorepo-shared-assets: 0.0.17
       ramda: 0.25.0
@@ -149,12 +153,14 @@ packages:
     dev: false
     resolution:
       integrity: sha512-3t6rVToeoZfYSGd8YoLFR2DJkiQrIiUrGcjvFX2mDw3bn6k2OtwHN0TNCLbBO+w8qTvimhDkv+LSscbJY1vE6w==
-  /get-stream/3.0.0:
+  /get-stream/4.1.0:
+    dependencies:
+      pump: 3.0.0
     dev: false
     engines:
-      node: '>=4'
+      node: '>=6'
     resolution:
-      integrity: sha1-jpQ9E1jcN1VQVOy+LtsFqhdO3hQ=
+      integrity: sha512-GMat4EJ5161kIy2HevLlr4luNjBgvmj413KaQA7jt4V8B4RDsfpHk7WQ9GVqfYyyx8OS/L66Kox+rJRNklLK7w==
   /graceful-fs/4.1.15:
     dev: false
     resolution:
@@ -218,17 +224,17 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-7AO748wWnIhNqAuaty2ZWHkQHRSNfPVIsPIfwEOWO22AmaoVrWavlOcMR5nzTLNYvp36X220/maaRsrec1G65A==
-  /map-age-cleaner/0.1.2:
+  /map-age-cleaner/0.1.3:
     dependencies:
       p-defer: 1.0.0
     dev: false
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-UN1dNocxQq44IhJyMI4TU8phc2m9BddacHRPRjKGLYaF0jqd3xLz0jS0skpAU9WgYyoR4gHtUpzytNBS385FWQ==
+      integrity: sha512-bJzx6nMoP6PDLPBFmg7+xRKeFZvFboMrGlxmNj9ClvX53KrmvM5bXFXEWjbz4cz1AFn+jWJ9z/DJSz7hrs0w3w==
   /mem/4.0.0:
     dependencies:
-      map-age-cleaner: 0.1.2
+      map-age-cleaner: 0.1.3
       mimic-fn: 1.2.0
       p-is-promise: 1.1.0
     dev: false
@@ -244,8 +250,8 @@ packages:
       integrity: sha512-jf84uxzwiuiIVKiOLpfYk7N46TSy8ubTonmneY9vrpHNAnp0QBt2BxWV9dO3/j+BoVAb+a5G6YDPW3M5HOdMWQ==
   /monorepo-shared-assets/0.0.17:
     dependencies:
-      '@types/node': 10.12.5
-      '@types/ramda': 0.25.41
+      '@types/node': 10.12.18
+      '@types/ramda': 0.25.45
       immutable: 3.8.2
       ramda: 0.25.0
       tslib: 1.9.3
@@ -272,16 +278,22 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
-  /os-locale/3.0.1:
+  /once/1.4.0:
     dependencies:
-      execa: 0.10.0
+      wrappy: 1.0.2
+    dev: false
+    resolution:
+      integrity: sha1-WDsap3WWHUsROsF9nFC6753Xa9E=
+  /os-locale/3.1.0:
+    dependencies:
+      execa: 1.0.0
       lcid: 2.0.0
       mem: 4.0.0
     dev: false
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-7g5e7dmXPtzcP4bgsZ8ixDVqA7oWYuEz4lOSujeWyliPai4gfVDiFIcwBg3aGCPnmSGfzOKTK3ccPn0CKv3DBw==
+      integrity: sha512-Z8l3R4wYWM40/52Z+S265okfFj8Kt2cC2MKY+xNi3kFs+XGI7WXu/I309QQQYbRW4ijiZ+yxs9pqEhJh0DqW3Q==
   /p-defer/1.0.0:
     dev: false
     engines:
@@ -300,17 +312,17 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-nJRWmJ6fZYgBewQ01WCXZ1w9oF4=
-  /p-limit/2.0.0:
+  /p-limit/2.1.0:
     dependencies:
       p-try: 2.0.0
     dev: false
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-fl5s52lI5ahKCernzzIyAP0QAZbGIovtVHGwpcu1Jr/EpzLVDI2myISHwGqK7m8uQFugVWSrbxH7XnhGtvEc+A==
+      integrity: sha512-NhURkNcrVB+8hNfLuysU8enY5xn2KXphsHBaC2YmRNTZRc7RWusw6apSpdEj3jo4CMb6W9nrF6tTnsJsJeyu6g==
   /p-locate/3.0.0:
     dependencies:
-      p-limit: 2.0.0
+      p-limit: 2.1.0
     dev: false
     engines:
       node: '>=6'
@@ -334,6 +346,13 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha1-QRyttXTFoUDTpLGRDUDYDMn0C0A=
+  /pump/3.0.0:
+    dependencies:
+      end-of-stream: 1.4.1
+      once: 1.4.0
+    dev: false
+    resolution:
+      integrity: sha512-LwZy+p3SFs1Pytd/jYct4wpv49HiYCqd9Rlc5ZVdk0V+8Yzv6jR5Blk3TRmPL1ft69TxP0IMZGJ+WPFU2BFhww==
   /ramda/0.25.0:
     dev: false
     resolution:
@@ -446,37 +465,38 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-2Pw9KE3QV5T+hJc8rs3Rz4JP3YU=
-  /xregexp/4.0.0:
+  /wrappy/1.0.2:
     dev: false
     resolution:
-      integrity: sha512-PHyM+sQouu7xspQQwELlGwwd05mXUFqwFYfqPO0cC7x4fxyHnnuetmQr6CjJiafIDoH4MogHb9dOoJzR/Y4rFg==
+      integrity: sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
   /y18n/4.0.0:
     dev: false
     resolution:
       integrity: sha512-r9S/ZyXu/Xu9q1tYlpsLIsa3EeLXXk0VwlxqTcFRfg9EhMW+17kbt9G0NrgCmhGb5vT2hyhJZLfDGx+7+5Uj/w==
-  /yargs-parser/10.1.0:
+  /yargs-parser/11.1.1:
     dependencies:
-      camelcase: 4.1.0
+      camelcase: 5.0.0
+      decamelize: 1.2.0
     dev: false
     resolution:
-      integrity: sha512-VCIyR1wJoEBZUqk5PA+oOBF6ypbwh5aNB3I50guxAL/quggdfs4TtNHQrSazFA3fYZ+tEqfs0zIGlv0c/rgjbQ==
-  /yargs/12.0.2:
+      integrity: sha512-C6kB/WJDiaxONLJQnF8ccx9SEeoTTLek8RVbaOIsrAUS8VrBEXfmeSnCZxygc+XC2sNMBIwOOnfcxiynjHsVSQ==
+  /yargs/12.0.5:
     dependencies:
       cliui: 4.1.0
-      decamelize: 2.0.0
+      decamelize: 1.2.0
       find-up: 3.0.0
       get-caller-file: 1.0.3
-      os-locale: 3.0.1
+      os-locale: 3.1.0
       require-directory: 2.1.1
       require-main-filename: 1.0.1
       set-blocking: 2.0.0
       string-width: 2.1.1
       which-module: 2.0.0
       y18n: 4.0.0
-      yargs-parser: 10.1.0
+      yargs-parser: 11.1.1
     dev: false
     resolution:
-      integrity: sha512-e7SkEx6N6SIZ5c5H22RTZae61qtn3PYUE8JYbBFlK9sYmh3DMQ6E5ygtaG/2BW0JZi4WGgTR2IV5ChqlqrDGVQ==
+      integrity: sha512-Lhz8TLaYnxq/2ObqHDql8dX8CJi97oHxrjUcYtzKbbykPtVW9WB+poxI+NM2UIzsMgNCZTIf0AQwsjK5yMAqZw==
 registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3

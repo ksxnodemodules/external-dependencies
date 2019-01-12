@@ -8,7 +8,7 @@ const collectCoverage = TEST_WITHOUT_COVERAGE.toLowerCase() !== 'true'
 const {
   moduleFileExtensions,
   coveragePathIgnorePatterns
-} = require('./lib/contants')
+} = require('./lib/constants')
 
 const packageJson = {
   displayName: 'validate',
@@ -23,7 +23,7 @@ const test = {
     '\\.tsx?$': require.resolve('ts-jest'),
     '\\.(yaml|yml)$': require.resolve('yaml-jest')
   },
-  testRegex: '(test|spec|check)\\.(jsx?|tsx?)$',
+  testRegex: '\\.(test|spec|check)\\.(jsx?|tsx?)$',
   moduleFileExtensions,
   collectCoverage,
   coveragePathIgnorePatterns,
