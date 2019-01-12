@@ -2,7 +2,7 @@ dependencies:
   '@types/fs-extra': 5.0.4
   '@types/node': 10.12.18
   '@types/semver': 5.5.0
-  advanced-set-mutable-multi-key: 0.0.1
+  advanced-set-mutable-multi-key: 0.0.2
   fs-extra: 7.0.1
   glob: 7.1.3
   glob-promise: 3.4.0
@@ -76,29 +76,29 @@ packages:
       node: '>= 8.9.0'
     resolution:
       integrity: sha512-RP3zt5zRkNTAWCW/0u1A3jmOp6xel8qFt0U9YYbuhNRGIkjGhHOb9lzchbND6yutVohaH32Voz0ojbOVIzkZLg==
-  /advanced-set-multi-key-base/0.0.1:
+  /advanced-set-multi-key-base/0.0.2:
     dependencies:
       '@types/node': 10.12.18
       advanced-set-altered-equal: 0.0.1
       advanced-set-types: 0.0.0
-      create-array-equal: 0.0.0
+      create-array-equal: 0.0.1
       tslib: 1.9.3
     dev: false
     engines:
       node: '>= 8.9.0'
     resolution:
-      integrity: sha512-kCZJkQZzpCbdmn830Bv6OX1MA9FlAuo3zJB0X6gdyPMqKSiA+lLk1JuBBEBjjT+XJdM1ISGMoUg70s16xOZTPg==
-  /advanced-set-mutable-multi-key/0.0.1:
+      integrity: sha512-HFLsniK99rMC4eCyzOalsghuSE4nfUl4DyFfun9sfHlmSY3QHXuaRfNL7UVaHeUCcPLGrzgE3vCVsIrX4WJtiw==
+  /advanced-set-mutable-multi-key/0.0.2:
     dependencies:
       '@types/node': 10.12.18
-      advanced-set-multi-key-base: 0.0.1
+      advanced-set-multi-key-base: 0.0.2
       advanced-set-types: 0.0.0
       tslib: 1.9.3
     dev: false
     engines:
       node: '>= 8.9.0'
     resolution:
-      integrity: sha512-+9XfZs67S9r5Xh3wXNYDWZaspBHmKL1YA+NOhSsQSteRMrs6d8prPto0DB2bvXExkvlbiBG9Wo6pXwhQgVe2RA==
+      integrity: sha512-eNTZUb7JjV57fuwnjAP7F4OX9btunZ1dhmbpy19Vk2kamrDz1kxNihiTZOaY0YkgCcc7s/z6G0gHauqdNPeZ1w==
   /advanced-set-types/0.0.0:
     dependencies:
       '@types/node': 10.12.18
@@ -138,7 +138,7 @@ packages:
     dev: false
     resolution:
       integrity: sha512-NdBPF/RVwPW6jr0NCILuyN9RiqLo2b1mddWHkUL+VnvcB7dzlnBJ1bXYntjpTGOgkZiiLWj2JxmOr7eGE3qK6g==
-  /create-array-equal/0.0.0:
+  /create-array-equal/0.0.1:
     dependencies:
       '@types/node': 10.12.18
       iter-tools: 6.1.7
@@ -148,7 +148,7 @@ packages:
     engines:
       node: '>= 8.9.0'
     resolution:
-      integrity: sha512-PKGYy366uoR4/A1RqKgVmyZfxf7M7Ilp9L7zHx7OubCylYp4G2WcS3gnLwrfSKIUfbV8jOOYqY1YbNOhVGhR9g==
+      integrity: sha512-QCpEgP2tYOfEK41zZzltXNWaB6HJYhZVVBEFc5o6+6FyHf4AUEVb0mBXJPYGNAPN/nT+TFFW4+ar8R3TQ1XxXg==
   /dequeue/1.0.5:
     dev: false
     resolution:
@@ -301,10 +301,10 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   '@types/fs-extra': ^5.0.4
-  '@types/node': ^10.12.0
+  '@types/node': ^10.12.18
   '@types/semver': ^5.5.0
-  advanced-set-mutable-multi-key: ^0.0.1
-  fs-extra: ^7.0.0
+  advanced-set-mutable-multi-key: ^0.0.2
+  fs-extra: ^7.0.1
   glob: ^7.1.3
   glob-promise: ^3.4.0
   semver: ^5.6.0

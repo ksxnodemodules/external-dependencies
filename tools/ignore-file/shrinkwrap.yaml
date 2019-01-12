@@ -6,7 +6,7 @@ dependencies:
   '@types/minimatch': 3.0.3
   fs-extra: 7.0.1
   fs-tree-utils: 0.1.6
-  js-yaml: 3.12.0
+  js-yaml: 3.12.1
   minimatch: 3.0.4
   tslib: 1.9.3
 packages:
@@ -94,14 +94,14 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-wkOZUUVbs5kT2vKBN28VMOEErfM=
-  /js-yaml/3.12.0:
+  /js-yaml/3.12.1:
     dependencies:
       argparse: 1.0.10
       esprima: 4.0.1
     dev: false
     hasBin: true
     resolution:
-      integrity: sha512-PIt2cnwmPfL4hKNwqeiuz4bKfnzHTBv6HyVgjahA6mPLwPDzjDWrplJBMjHUFxku/N3FlmrbyPclad+I+4mJ3A==
+      integrity: sha512-um46hB9wNOKlwkHgiuyEVAybXBjwFUV0Z/RaHJblRd9DXltue9FTYvzCr9ErQrK9Adz5MU4gHWVaNUfdmrC8qA==
   /jsonfile/4.0.0:
     dev: false
     optionalDependencies:
@@ -151,10 +151,10 @@ specifiers:
   '@tools/places': 'file:../places'
   '@tools/preloaded-node': 'file:../preloaded-node'
   '@types/fs-extra': ^5.0.4
-  '@types/js-yaml': ^3.11.2
+  '@types/js-yaml': ^3.11.4
   '@types/minimatch': ^3.0.3
   fs-extra: ^7.0.1
   fs-tree-utils: ^0.1.6
-  js-yaml: ^3.12.0
+  js-yaml: ^3.12.1
   minimatch: ^3.0.4
   tslib: ^1.9.3

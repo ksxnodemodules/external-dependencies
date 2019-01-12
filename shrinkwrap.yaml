@@ -1,10 +1,10 @@
 devDependencies:
   '@tools/scripts': 'link:tools/scripts'
-  '@types/jest': 23.3.10
+  '@types/jest': 23.3.12
   '@types/node': 10.12.18
   standard: 12.0.1
   toolcheck: 0.0.5
-  tslint: 5.12.0
+  tslint: 5.12.1
   tslint-config-standard: 8.0.1
   typescript: 3.2.2
 packages:
@@ -14,10 +14,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-HgTGG7X5y9pLl3pixeo2XtDEFD8rq2EuH+S4mK6teCnAwWMucQl6v1D43hI4Uw1VJh6nu59lxLkqXHRl4uwThA==
-  /@types/jest/23.3.10:
+  /@types/jest/23.3.12:
     dev: true
     resolution:
-      integrity: sha512-DC8xTuW/6TYgvEg3HEXS7cu9OijFqprVDXXiOcdOKZCU/5PJNLZU37VVvmZHdtMiGOa8wAA/We+JzbdxFzQTRQ==
+      integrity: sha512-/kQvbVzdEpOq4tEWT79yAHSM4nH4xMlhJv2GrLVQt4Qmo8yYsPdioBM1QpN/2GX1wkfMnyXvdoftvLUr0LBj7Q==
   /@types/node/10.12.18:
     dev: true
     resolution:
@@ -1602,7 +1602,7 @@ packages:
       typescript: ^2.2.0 || ^3.0.0
     resolution:
       integrity: sha512-WlSXE+J2vY/VPgIcqQuijMQiel+UtmXS+4nvK4ZzlDiqBfXse8FAvkNnTcYhnQyOTW5KFM+uRRGXxYhFpuBc6w==
-  /tslint/5.12.0:
+  /tslint/5.12.1:
     dependencies:
       babel-code-frame: 6.26.0
       builtin-modules: 1.1.1
@@ -1623,7 +1623,7 @@ packages:
     peerDependencies:
       typescript: '>=2.1.0 || >=2.1.0-dev || >=2.2.0-dev || >=2.3.0-dev || >=2.4.0-dev || >=2.5.0-dev || >=2.6.0-dev || >=2.7.0-dev || >=2.8.0-dev || >=2.9.0-dev'
     resolution:
-      integrity: sha512-CKEcH1MHUBhoV43SA/Jmy1l24HJJgI0eyLbBNSRyFlsQvb9v6Zdq+Nz2vEOH00nC5SUx4SneJ59PZUS/ARcokQ==
+      integrity: sha512-sfodBHOucFg6egff8d1BvuofoOQ/nOeYNfbp7LDlKBcLNrL3lmS5zoiDGyOMdT7YsEXAwWpTdAHwOGOc8eRZAw==
   /tsutils/2.29.0:
     dependencies:
       tslib: 1.9.3
@@ -1708,10 +1708,10 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   '@tools/scripts': 'file:./tools/scripts'
-  '@types/jest': ^23.3.10
-  '@types/node': ^10.12.12
+  '@types/jest': ^23.3.12
+  '@types/node': ^10.12.18
   standard: ^12.0.1
   toolcheck: ^0.0.5
-  tslint: ^5.11.0
+  tslint: ^5.12.1
   tslint-config-standard: ^8.0.1
   typescript: ^3.2.2

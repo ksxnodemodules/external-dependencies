@@ -111,7 +111,7 @@ shrinkwrapVersion: 3
 specifiers:
   '@tools/typescript': 'file:../typescript'
   '@types/json5': ^0.0.30
-  '@types/node': ^10.12.12
+  '@types/node': ^10.12.18
   json5: ^2.1.0
   ts-node: ^7.0.1
   tslib: ^1.9.3

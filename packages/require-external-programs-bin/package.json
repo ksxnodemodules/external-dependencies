@@ -24,7 +24,7 @@
   "dependencies": {
     "tslib": "^1.9.3",
     "require-external-programs-utils": "^0.0.6",
-    "@types/node": "^10.12.0"
+    "@types/node": "^10.12.18"
   },
   "engines": {
     "node": ">= 8.9.0"
