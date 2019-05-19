@@ -27,7 +27,7 @@
     "advanced-set-mutable-multi-key": "^0.0.2",
     "tslib": "^1.9.3",
     "@types/semver": "^5.5.0",
-    "@types/fs-extra": "^5.0.4",
+    "@types/fs-extra": "^7.0.0",
     "@types/node": "^10.12.18"
   },
   "engines": {
