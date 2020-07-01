@@ -19,7 +19,7 @@
     "require"
   ],
   "dependencies": {
-    "chalk": "^2.4.2",
+    "chalk": "^4.0.0",
     "advanced-map-initialized": "^0.0.2",
     "tslib": "^1.9.3",
     "require-external-programs-lib": "^0.0.6",
